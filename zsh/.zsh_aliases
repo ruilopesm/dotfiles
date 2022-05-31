@@ -1,7 +1,7 @@
 # Aliases #
 
 # Config
-alias src="source ~/.zshrc"
+alias src="source $HOME/.zshrc"
 alias at="alacritty-themes"
 
 # Common commands
@@ -25,24 +25,24 @@ fuction bb_down() {
     wget --user=A100643 --ask-password $1
 }
 
-alias li1="cd ~/Code/Universidade/LI-1"
-alias li2="cd ~/Code/Universidade/LI-2"
-alias pf="cd ~/Code/Universidade/PF"
-alias pi="cd ~/Code/Universidade/PI"
-alias proj="cd ~/Code/Universidade/LI-2/Stack-Machine-LI2 && git status"
+alias li1="cd $HOME/Code/Universidade/LI-1"
+alias li2="cd $HOME/Code/Universidade/LI-2"
+alias pf="cd $HOME/Code/Universidade/PF"
+alias pi="cd $HOME/Code/Universidade/PI"
+alias proj="cd $HOME/Code/Universidade/LI-2/Stack-Machine-LI2 && git status"
 
-alias cesium="cd ~/Code/Universidade/CeSIUM"
+alias cesium="cd $HOME/Code/Universidade/CeSIUM"
 
 # Directories
-alias dtop="cd ~/Desktop"
-alias down="cd ~/Downloads && ls"
-alias docs="cd ~/Documents"
-alias bb="cd ~/Documents/Blackboard"
-alias clones="cd ~/Clones"
+alias dtop="cd $HOME/Desktop"
+alias down="cd $HOME/Downloads && ls"
+alias docs="cd $HOME/Documents"
+alias bb="cd $HOME/Documents/Blackboard"
+alias clones="cd $HOME/Clones"
 
-alias co="cd ~/Code/Projects"
-alias py="cd ~/Code/Projects/Python"
-alias web="cd ~/Code/Projects/Web"
+alias co="cd $HOME/Code/Projects"
+alias py="cd $HOME/Code/Projects/Python"
+alias web="cd $HOME/Code/Projects/Web"
 
 # Functions #
 
