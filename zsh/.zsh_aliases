@@ -1,0 +1,68 @@
+# Aliases #
+
+# Config
+alias src="source ~/.zshrc"
+alias at="alacritty-themes"
+
+# Common commands
+alias ls="exa"
+alias cat="bat"
+alias find="fd"
+alias y="yay"
+
+alias q="exit"
+alias c="clear"
+alias h="history"
+alias shut="shutdown now"
+
+# University
+function run() {
+    gcc "$1" -o main -std=c11 -Wall -Wextra -pedantic -O2 -lm
+    ./main
+}
+
+fuction bb_down() {
+    wget --user=A100643 --ask-password $1
+}
+
+alias li1="cd ~/Code/Universidade/LI-1"
+alias li2="cd ~/Code/Universidade/LI-2"
+alias pf="cd ~/Code/Universidade/PF"
+alias pi="cd ~/Code/Universidade/PI"
+alias proj="cd ~/Code/Universidade/LI-2/Stack-Machine-LI2 && git status"
+
+alias cesium="cd ~/Code/Universidade/CeSIUM"
+
+# Directories
+alias dtop="cd ~/Desktop"
+alias down="cd ~/Downloads && ls"
+alias docs="cd ~/Documents"
+alias bb="cd ~/Documents/Blackboard"
+alias clones="cd ~/Clones"
+
+alias co="cd ~/Code/Projects"
+alias py="cd ~/Code/Projects/Python"
+alias web="cd ~/Code/Projects/Web"
+
+# Functions #
+
+# cURL weather of specified location (argument: location)
+function weather() { 
+    curl wttr.in/$1
+}
+
+# Shows a list with the most used commands (argument: number of most used commands)
+function topcmd() { 
+    history | awk '{print $3}' | sort | uniq -c | sort -nr | column -t | nl | head -n$1
+}
+
+# Creates a folder and changes the directory into it (argument: folder name)
+function mkcd() {
+    mkdir -p $1
+    cd $1
+}
+
+# Changes wallpaper using feh (argument: wallpaper filename)
+function cw() {
+    feh --bg-scale ~/Pictures/$1
+}
