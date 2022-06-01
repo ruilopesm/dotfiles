@@ -16,6 +16,7 @@ plugins=(git asdf zsh-autosuggestions colored-man-pages command-not-found copypa
 # External files
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases
+source $HOME/.zsh_functions
 
 # User configuration
 export LANG=en_US.UTF-8
