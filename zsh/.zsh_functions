@@ -1,0 +1,41 @@
+# University #
+
+# Compile and run a C program (argument: C filename)
+function run() {
+    gcc "$1" -o main -std=c11 -Wall -Wextra -pedantic -O2 -lm
+    ./main
+}
+
+# Download a file from blackboard using wget (argument: link to the file)
+fuction bb_down() {
+    wget --user=A100643 --ask-password $1
+}
+
+# Other #
+
+# cURL weather of specified location (argument: location)
+function weather() { 
+    curl wttr.in/$1
+}
+
+# Shows a list with the most used commands (argument: number of most used commands)
+function topcmd() { 
+    history | awk '{print $3}' | sort | uniq -c | sort -nr | column -t | nl | head -n$1
+}
+
+# Creates a folder and changes the directory into it (argument: folder name)
+function mkcd() {
+    mkdir -p $1
+    cd $1
+}
+
+# Changes wallpaper using feh (argument: wallpaper filename)
+function cw() {
+    feh --bg-scale ~/Pictures/$1
+}
+
+# Opens given file using xdg-open (argument: filename)
+function open() {
+    xdg-open $@ &
+    disown
+}
