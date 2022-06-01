@@ -39,3 +39,9 @@ function open() {
     xdg-open $@ &
     disown
 }
+
+# Clones a repository and changes the directory into it (argument repository link)
+function clonecd() {
+    git clone --recurse-submodules $@
+    cd "$(basename "$_" .git)"
+}
