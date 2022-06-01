@@ -1,10 +1,9 @@
-# Aliases #
-
-# Config
+# Config #
+alias dot="cd $HOME/dotfiles"
 alias src="source $HOME/.zshrc"
 alias at="alacritty-themes"
 
-# Common commands
+# Common commands #
 alias ls="exa"
 alias cat="bat"
 alias find="fd"
@@ -15,16 +14,7 @@ alias c="clear"
 alias h="history"
 alias shut="shutdown now"
 
-# University
-function run() {
-    gcc "$1" -o main -std=c11 -Wall -Wextra -pedantic -O2 -lm
-    ./main
-}
-
-fuction bb_down() {
-    wget --user=A100643 --ask-password $1
-}
-
+# University #
 alias li1="cd $HOME/Code/Universidade/LI-1"
 alias li2="cd $HOME/Code/Universidade/LI-2"
 alias pf="cd $HOME/Code/Universidade/PF"
@@ -43,32 +33,3 @@ alias clones="cd $HOME/Clones"
 alias co="cd $HOME/Code/Projects"
 alias py="cd $HOME/Code/Projects/Python"
 alias web="cd $HOME/Code/Projects/Web"
-
-# Functions #
-
-# cURL weather of specified location (argument: location)
-function weather() { 
-    curl wttr.in/$1
-}
-
-# Shows a list with the most used commands (argument: number of most used commands)
-function topcmd() { 
-    history | awk '{print $3}' | sort | uniq -c | sort -nr | column -t | nl | head -n$1
-}
-
-# Creates a folder and changes the directory into it (argument: folder name)
-function mkcd() {
-    mkdir -p $1
-    cd $1
-}
-
-# Changes wallpaper using feh (argument: wallpaper filename)
-function cw() {
-    feh --bg-scale ~/Pictures/$1
-}
-
-# Opens given file using xdg-open (argument: file)
-function open() {
-    xdg-open $@ &
-    disown
-}
