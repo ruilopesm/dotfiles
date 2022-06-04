@@ -13,6 +13,7 @@ alias q="exit"
 alias c="clear"
 alias h="history"
 alias shut="shutdown now"
+alias up="sudo pacman -Syyu"
 
 # University #
 alias li1="cd $HOME/Code/Universidade/LI-1"
