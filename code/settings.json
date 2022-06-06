@@ -1,0 +1,70 @@
+{
+    "git.autofetch": true,
+    "files.autoSave": "afterDelay",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Default",
+    "launch": {
+    
+        "configurations": [],
+        "compounds": []
+    },
+    "terminal.external.linuxExec": "x-terminal-emulator",
+    "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.compactFolders": false,
+    "workbench.startupEditor": "none",
+    "dashboard.projectData": null,
+    "terminal.explorerKind": "external",
+    "explorer.confirmDelete": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.fontLigatures": true,
+    "bookmarks.saveBookmarksInProject": true,
+    "python.envFile": "${workspaceFolder}/data/.env",
+    "python.analysis.completeFunctionParens": true,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "discord.lowerDetailsDebugging": "Workspace: {workspace}",
+    "discord.removeRemoteRepository": true,
+    "python.analysis.autoImportCompletions": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.defaultDateFormat": null,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "workbench.productIconTheme": "material-product-icons",
+    "editor.fontFamily": "Fira Code, monospace",
+    "editor.cursorSmoothCaretAnimation": true,
+    "workbench.colorTheme": "Material Night Eighties",
+    "editor.tokenColorCustomizations": {
+        "[Material Night Eighties]": {
+            "comments": "#76bb87"
+        }
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.cursorBlinking": "phase",
+    "thunder-client.codeSnippetLanguage": "python-requests",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "c": false
+    },
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "vscode-great-icons",
+    "window.zoomLevel": 1
+}
