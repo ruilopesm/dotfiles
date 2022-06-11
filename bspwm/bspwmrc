@@ -25,6 +25,7 @@ picom & disown
 sh $HOME/.fehbg
 blugon --setcurrent 4500
 
+xsetroot -cursor_name left_ptr
 setxkbmap pt
 xbindkeys --file $HOME/.xbindkeysrc
 
