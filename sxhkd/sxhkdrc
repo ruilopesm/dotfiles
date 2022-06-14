@@ -1,12 +1,10 @@
-# normal hotkeys #
-
 # Terminal emulator
 super + Return
 	alacritty
 
 # Program launcher
 super + d
-	sh ~/.config/rofi/launchers/colorful/launcher.sh
+	$HOME/.config/rofi/launcher.sh
 
 # Make sxhkd reload its configuration files:
 super + Escape
@@ -15,8 +13,6 @@ super + Escape
 # Lockscreen
 alt + shift + x
 	betterlockscreen --blur 0.7 -l blur 
-
-# bspwm hotkeys #
 
 # Quit/restart bspwm
 super + alt + {q,r}
