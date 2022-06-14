@@ -24,7 +24,7 @@
     XF86MonBrightnessDown # FN + F2
 
 # Open power_menu (rofi)
-"sh $HOME/dotfiles/polybar/scripts/power_menu/power_menu.sh"
+"sh $HOME/dotfiles/rofi/power-menu/power-menu.sh"
     m:0x14 + c:49
     Control + Mod2 + backslash # CTRL + \
 
