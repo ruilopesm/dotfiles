@@ -1,14 +1,4 @@
 #!/usr/bin/env bash
-
-# This script defines just a mode for rofi instead of being a self-contained
-# executable that launches rofi by itself. This makes it more flexible than
-# running rofi inside this script as now the user can call rofi as one pleases.
-# For instance:
-#
-#   rofi -show powermenu -modi powermenu:./rofi-power-menu
-#
-# See README.md for more information.
-
 set -e
 set -u
 
@@ -142,9 +132,6 @@ while true; do
     esac
 done
 
-# Define the messages after parsing the CLI options so that it is possible to
-# configure them in the future.
-
 function write_message {
     icon="<span font_size=\"medium\">$1</span>"
     text="<span font_size=\"medium\">$2</span>"
@@ -184,9 +171,7 @@ else
     fi
 fi
 
-# Don't allow custom entries
 echo -e "\0no-custom\x1ftrue"
-# Use markup
 echo -e "\0markup-rows\x1ftrue"
 
 if [ -z "${selection+x}" ]
@@ -234,7 +219,7 @@ else
             exit 0
         fi
     done
-    # The selection didn't match anything, so raise an error
+   
     echo "Invalid selection: $selection" >&2
     exit 1
 fi
