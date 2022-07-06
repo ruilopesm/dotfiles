@@ -31,7 +31,7 @@ function mkcd() {
 
 # Changes wallpaper using feh (argument: wallpaper filename)
 function cw() {
-    feh --bg-scale ~/Pictures/$1
+    feh --bg-scale ~/Pictures/wallpapers/$1
 }
 
 # Opens given file using xdg-open (argument: filename)
