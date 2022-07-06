@@ -66,5 +66,9 @@
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "vscode-great-icons",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "vim.handleKeys": {
+        "<C-w>": false
+    },
+    "workbench.sideBar.location": "right"
 }
