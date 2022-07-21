@@ -1,8 +1,8 @@
 # Shell configuration
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR="vim"
+export EDITOR="nvim"
 
-ZSH_THEME="nanotech"
+ZSH_THEME="candy"
 
 zstyle ':omz:update' mode auto
 zstyle ':completion:' use-cache on
@@ -23,10 +23,8 @@ export LANG=en_US.UTF-8
 
 # PATH
 export PATH=~/bin:$PATH
-export PATH=$HOME/.config/rofi/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
-export PATH="$PATH:$HOME/.spicetify"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. /opt/asdf-vm/asdf.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
