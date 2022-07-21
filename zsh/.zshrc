@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="vim"
 
-ZSH_THEME="nanotech"
+ZSH_THEME="candy"
 
 zstyle ':omz:update' mode auto
 zstyle ':completion:' use-cache on
