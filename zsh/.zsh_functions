@@ -14,12 +14,12 @@ fuction bb_down() {
 # Other #
 
 # cURL weather of specified location (argument: location)
-function weather() { 
+function weather() {
     curl wttr.in/$1
 }
 
 # Shows a list with the most used commands (argument: number of most used commands)
-function topcmd() { 
+function topcmd() {
     history | awk '{print $3}' | sort | uniq -c | sort -nr | column -t | nl | head -n$1
 }
 
