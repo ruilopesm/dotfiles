@@ -1,9 +1,8 @@
-# Config #
-alias dot="cd $HOME/dotfiles"
+# Config
 alias src="source $HOME/.zshrc"
 alias at="alacritty-themes"
 
-# Common commands #
+# Common commands
 alias ls="exa"
 alias cat="bat"
 alias find="fd"
@@ -14,23 +13,3 @@ alias c="clear"
 alias h="history"
 alias shut="shutdown now"
 alias up="sudo pacman -Syyu"
-
-# University #
-alias li1="cd $HOME/Code/Universidade/LI-1"
-alias li2="cd $HOME/Code/Universidade/LI-2"
-alias pf="cd $HOME/Code/Universidade/PF"
-alias pi="cd $HOME/Code/Universidade/PI"
-alias proj="cd $HOME/Code/Universidade/LI-2/Stack-Machine-LI2 && git status"
-
-alias cesium="cd $HOME/Code/Universidade/CeSIUM"
-
-# Directories
-alias dtop="cd $HOME/Desktop"
-alias down="cd $HOME/Downloads && ls"
-alias docs="cd $HOME/Documents"
-alias bb="cd $HOME/Documents/Blackboard"
-alias clones="cd $HOME/Clones"
-
-alias co="cd $HOME/Code/Projects"
-alias py="cd $HOME/Code/Projects/Python"
-alias web="cd $HOME/Code/Projects/Web"

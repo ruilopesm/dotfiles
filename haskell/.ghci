@@ -1,3 +1,4 @@
 :set prompt "\ESC[32m%s \ESC[1;32mλ\ESC[2;37m: \ESC[0m"
 :set +s
 :set +t
+:!clear
