@@ -1,6 +1,6 @@
 # Shell configuration
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR="vim"
+export EDITOR="nvim"
 
 ZSH_THEME="candy"
 
