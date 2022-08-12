@@ -65,3 +65,6 @@ cursor:
   unfocused_hollow: true
 
 dynamic_title: true
+
+env:
+  WINIT_X11_SCALE_FACTOR: "1.5"
