@@ -1,8 +1,16 @@
 #!/bin/sh
 
+if [ -x $HOME/.config/monitor-setup.sh ]; then
+    $HOME/.config/monitor-setup.sh
+fi
+
+if [ -x /usr/local/bin/polybar ]; then
+    sh $HOME/.config/polybar/launcher.sh
+fi
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
 
 bspc config border_width 3
 bspc config window_gap 12
