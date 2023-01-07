@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 
 if [ -x $HOME/.config/monitor-setup.sh ]; then
     $HOME/.config/monitor-setup.sh
@@ -10,10 +10,10 @@ fi
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
+bspc monitor eDP-1-1 -d I II III IV V VI VII VIII IX X
 
 bspc config border_width 3
-bspc config window_gap 12
+bspc config window_gap 10
 
 bspc config split_ratio 0.50
 bspc config borderless_monocle true
@@ -28,9 +28,11 @@ sh $HOME/.fehbg
 sh $HOME/.config/polybar/launcher.sh
 
 xsetroot -cursor_name left_ptr
+setxkbmap pt
 xbindkeys --file $HOME/.xbindkeysrc
 
 nm-applet & disown
 blueman-applet & disown
+optimus-manager-qt & disown
 
-warp-cli register; warp-cli connect
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
