@@ -1,0 +1,12 @@
+Host storm
+    HostName storm.cesium.di.uminho.pt
+    Port 2345
+    User ruilopes
+
+Host epl
+    HostName epl.di.uminho.pt
+    User cesium
+
+Host search
+    HostName s7edu.di.uminho.pt
+    User A100643
