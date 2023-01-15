@@ -3,10 +3,10 @@
 # Terminate already running bar instances
 killall polybar
 
-# Wait until the processes have benn shut down
+# Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Lauch polybar
+# Launch polybar
 polybar main -c $(dirname $0)/config.ini &
 
 case "$(xrandr -q | grep -w connected | wc -l)" in
