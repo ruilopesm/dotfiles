@@ -9,6 +9,9 @@ zstyle ':completion:' use-cache on
 
 ENABLE_CORRECTION="true"
 
+# History
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
 HIST_STAMPS="%d-%m-%Y"
 
 plugins=(git asdf zsh-autosuggestions colored-man-pages command-not-found copypath zsh-interactive-cd z)
@@ -20,6 +23,9 @@ source $HOME/.zsh_functions
 
 # User configuration
 export LANG=en_US.UTF-8
+export EDITOR=/usr/bin/nvim
+export BROWSER=/usr/bin/firefox-developer-edition
+export TERM=/usr/bin/alacritty
 
 # PATH
 export PATH=~/bin:$PATH
