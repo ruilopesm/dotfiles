@@ -1,19 +1,19 @@
 # University #
 
-# Compile and run a C program (argument: C filename)
+# Compiles and runs a C program (argument: C filename)
 function run() {
     gcc "$1" -o main -std=c11 -Wall -Wextra -pedantic -O2 -lm
     ./main
 }
 
-# Download a file from blackboard using wget (argument: link to the file)
+# Downloads a file from blackboard using wget (argument: link to the file)
 fuction bb_down() {
     wget --user=A100643 --ask-password $1
 }
 
 # Other #
 
-# cURL weather of specified location (argument: location)
+# Shows weather of specified location (argument: location)
 function weather() {
     curl wttr.in/$1
 }
@@ -40,7 +40,7 @@ function open() {
     disown
 }
 
-# Clones a repository and changes the directory into it (argument repository link)
+# Clones a repository and changes the directory into it (argument: repository link)
 function clonecd() {
     git clone --recurse-submodules $@
     cd "$(basename "$_" .git)"
