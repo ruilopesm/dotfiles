@@ -4,9 +4,6 @@
 [include]
   path = ~/.config/git/personal.config
 
-[includeIf "gitdir:~/Code/Universidade"]
-  path = ~/.config/git/uminho.config
-
 [web]
   browser = firefox-developer-edition
  
