@@ -25,7 +25,7 @@ source $HOME/.zsh_functions
 export LANG=en_US.UTF-8
 export EDITOR=/usr/bin/nvim
 export BROWSER=/usr/bin/firefox-developer-edition
-export TERM=/usr/bin/alacritty
+export TERM=alacritty
 
 # PATH
 export PATH=~/bin:$PATH
