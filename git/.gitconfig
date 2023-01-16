@@ -1,0 +1,44 @@
+[user]
+  name = Rui Lopes
+
+[include]
+  path = ~/.config/git/personal.config
+
+[includeIf "gitdir:~/Code/Universidade"]
+  path = ~/.config/git/uminho.config
+
+[web]
+  browser = firefox-developer-edition
+ 
+[core]
+  editor = nvim
+  pager = delta
+ 
+[init]
+  defaultBranch = main
+ 
+[delta]
+  light = false
+  features = decorations
+ 
+[commit]
+  gpgsign = true
+ 
+[tag]
+  gpgsign = true
+ 
+[log]
+  date = auto:human
+ 
+[push]
+  default = simple
+  autoSetupRemote = true
+ 
+[pull]
+  rebase = true
+ 
+[url "git@github.com:ruil1904/"]
+  insteadOf = gh:
+
+[url "git@github.com:"]
+  insteadOf = ghx:
