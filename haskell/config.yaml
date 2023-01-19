@@ -1,0 +1,12 @@
+templates:
+  params:
+    author-name: Rui Lopes
+    author-email: 76881129+RuiL1904@users.noreply.github.com 
+    github-username: RuiL1904
+
+install-ghc: false
+system-ghc: true
+compiler-check: newer-minor
+
+ghc-options: 
+  "$everything": -dynamic
