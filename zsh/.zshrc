@@ -26,10 +26,12 @@ export LANG=en_US.UTF-8
 export EDITOR=/usr/bin/nvim
 export BROWSER=/usr/bin/firefox-developer-edition
 export TERM=alacritty
+CORRECT_IGNORE_FILE=tests
 
 # PATH
 export PATH=~/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/share:$PATH
 
 . /opt/asdf-vm/asdf.sh
 
