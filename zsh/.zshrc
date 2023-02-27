@@ -36,3 +36,7 @@ export PATH=$HOME/.local/share:$PATH
 . /opt/asdf-vm/asdf.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pnpm
+export PNPM_HOME="/home/rui/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
