@@ -45,3 +45,8 @@ function clonecd() {
     git clone --recurse-submodules $@
     cd "$(basename "$_" .git)"
 }
+
+# Changes the current branch into a given PR branch (argument: PR number)
+function pr() {
+  gh pr checkout $1
+}
