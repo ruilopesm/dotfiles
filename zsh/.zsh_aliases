@@ -5,11 +5,9 @@ alias at="alacritty-themes"
 # Common commands
 alias ls="exa"
 alias cat="bat"
-alias find="fd"
 alias y="yay"
 
 alias q="exit"
 alias c="clear"
 alias h="history"
-alias shut="shutdown now"
 alias up="sudo pacman -Syyu"
