@@ -32,6 +32,7 @@ CORRECT_IGNORE_FILE=tests
 export PATH=~/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/share:$PATH
+export PATH=$HOME/dotfiles/scripts:$PATH
 
 . /opt/asdf-vm/asdf.sh
 
