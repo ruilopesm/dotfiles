@@ -3,39 +3,43 @@
 
 [include]
   path = ~/.config/git/personal.config
-
-[web]
-  browser = firefox-developer-edition
  
 [core]
   editor = nvim
   pager = delta
  
-[init]
-  defaultBranch = main
- 
 [delta]
   light = false
   features = decorations
+
+[color]
+  ui = true
+
+[web]
+  browser = firefox-developer-edition
+
+[init]
+  defaultBranch = main
  
 [commit]
   gpgsign = true
  
+[push]
+  default = simple
+  autoSetupRemote = true
+
+[pull]
+  rebase = true
+
 [tag]
   gpgsign = true
  
 [log]
   date = auto:human
- 
-[push]
-  default = simple
-  autoSetupRemote = true
- 
-[pull]
-  rebase = true
- 
-[url "git@github.com:ruil1904/"]
+
+[url "git@github.com:RuiL1904/"]
   insteadOf = gh:
 
 [url "git@github.com:"]
   insteadOf = ghx:
+
