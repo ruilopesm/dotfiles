@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Exec=sh -c "$HOME/dotfiles/scripts/core-startup"
+Name=CORE
+Icon=core
+Categories=Development;Networking;Science
+Comment=Scientific networking environment
+StartupNotify=true
