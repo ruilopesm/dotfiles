@@ -1,0 +1,5 @@
+[Default Applications]
+application/pdf=org.gnome.Evince.desktop
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/postman=Postman.desktop
