@@ -4,13 +4,10 @@
 
     width = 300
     height = 300
-
     origin = top-right
     offset = 10x50
-
     scale = 0
-
-    notification_limit = 0
+    transparency = 0
 
     progress_bar = true
     progress_bar_height = 10
@@ -18,29 +15,32 @@
     progress_bar_min_width = 150
     progress_bar_max_width = 300
 
-    indicate_hidden = yes
+    # No limit
+    notification_limit = 0
 
-    transparency = 0
-
+    # Separator between two notifications
     separator_height = 2
+    separator_color = frame
 
+    # Padding between text and separator
     padding = 8
     horizontal_padding = 8
+
+    # Padding between text and icon
     text_icon_padding = 0
 
+    # Notification frame
     frame_width = 3
     frame_color = "#aaaaaa"
 
     gap_size = 0
 
-    separator_color = frame
-
+    # Sort notifications by urgency
     sort = yes
-
-    font = Monospace 8
-
+    
+    # Text
+    font = FiraCode Nerd Font 8
     line_height = 0
-
     markup = full
 
     # The format of the message.  Possible variables are:
@@ -54,7 +54,8 @@
     #   %%  Literal %
     # Markup is allowed
     format = "<b>%s</b>\n%b"
-
+	
+    # Alignment of text
     alignment = left
     vertical_alignment = center
 
@@ -64,25 +65,29 @@
 
     ignore_newline = no
 
+    # Indicate how many hidden notifications are there
+    indicate_hidden = yes 
+    
+    # Manage notifications with the same content
     stack_duplicates = true
     hide_duplicate_count = false
     show_indicators = yes
 
-    enable_recursive_icon_lookup = true
+    # Icons
 
-    icon_theme = Vimix
     icon_position = left
     min_icon_size = 32
     max_icon_size = 128
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_path = /home/rui/dotfiles/dunst/icons/
+    enable_recursive_icon_lookup = true
 
+    # History
     sticky_history = yes
     history_length = 20
-
+	
+    # Misc
     dmenu = /usr/bin/dmenu -p dunst:
-
     browser = /usr/bin/xdg-open
-
     always_run_script = true
 
     title = Dunst
@@ -91,9 +96,10 @@
     corner_radius = 0
 
     ignore_dbusclose = false
-
+    force_wayland = false
     force_xinerama = false
 
+    # Mouse actions
     mouse_left_click = close_current
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
@@ -103,11 +109,11 @@
 
 [urgency_low]
     background = "#222222"
-    foreground = "#888888"
+    foreground = "#ffffff"
     timeout = 10
 
 [urgency_normal]
-    background = "#285577"
+    background = "#222222"
     foreground = "#ffffff"
     timeout = 10
 
