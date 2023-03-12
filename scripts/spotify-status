@@ -1,9 +1,15 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
-PLAYER=$(playerctl --list-all)
+player="spotify"
+status=$(playerctl -p $player status 2>/dev/null)
 
-if [ "$PLAYER" = "spotify" ]; then
-  TITLE=$(exec playerctl metadata xesam:title)
-  ARTIST=$(exec playerctl metadata xesam:artist)
-  echo "$TITLE - $ARTIST"
+if [ "$status" = "Playing" ]; then
+  song=$(playerctl -p $player metadata title 2>/dev/null)
+  artist=$(playerctl -p $player metadata artist 2>/dev/null)
+
+  echo "$song - $artist"
+elif [ "$status" = "Paused" ]; then
+  echo "Paused"
+else
+  echo "404 - Not Found"
 fi
