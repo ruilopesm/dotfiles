@@ -14,7 +14,7 @@ export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
 HIST_STAMPS="%d-%m-%Y"
 
-plugins=(git asdf zsh-autosuggestions colored-man-pages command-not-found copypath zsh-interactive-cd z)
+plugins=(git asdf zsh-autosuggestions colored-man-pages command-not-found copypath zsh-interactive-cd z zsh-syntax-highlighting)
 
 # External files
 source $ZSH/oh-my-zsh.sh
