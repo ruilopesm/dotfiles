@@ -1,13 +1,5 @@
-# Config
-alias src="source $HOME/.zshrc"
-alias at="alacritty-themes"
-
-# Common commands
 alias ls="exa"
 alias cat="bat"
-alias y="yay"
-
 alias q="exit"
 alias c="clear"
 alias h="history"
-alias up="sudo pacman -Syyu"
