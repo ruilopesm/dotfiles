@@ -1,5 +1,22 @@
+# mix
+alias im="iex -S mix"
+alias ms="mix phx.server"
+alias mc="mix check"
+alias mf="mix format"
+alias ml="mix lint"
+alias mt="mix test"
+
+# npm
+alias nd="npm run dev"
+alias nb="npm run build"
+alias nf="npm run format"
+alias nl="npm run lint"
+alias nt="npm run test"
+
+# others
 alias ls="exa"
 alias cat="bat"
 alias q="exit"
 alias c="clear"
 alias h="history"
+alias firefox="firefox developer-edition"
