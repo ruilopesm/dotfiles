@@ -41,3 +41,8 @@ export PATH=$HOME/dotfiles/scripts:$PATH
 # pnpm
 export PNPM_HOME="/home/rui/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# flyctl
+export FLYCTL_INSTALL="/home/rui/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
