@@ -1,17 +1,23 @@
 # mix
 alias im="iex -S mix"
+alias ims="iex -S mix phx.server"
 alias ms="mix phx.server"
 alias mc="mix check"
 alias mf="mix format"
 alias ml="mix lint"
 alias mt="mix test"
+alias mdg="mix deps.get"
+alias mcom="mix do clean, compile"
+alias mer="mix ecto.reset"
+alias mem="mix ecto.migrate"
+alias mes="mix ecto.seed"
 
 # npm
 alias nd="npm run dev"
 alias nb="npm run build"
 alias nf="npm run format"
-alias nl="npm run lint"
 alias nt="npm run test"
+alias ni="npm install"
 
 # others
 alias ls="exa"
