@@ -19,6 +19,9 @@ alias nf="npm run format"
 alias nt="npm run test"
 alias ni="npm install"
 
+# mssql
+alias sqlcmd="sqlcmd -C"
+
 # others
 alias ls="exa"
 alias cat="bat"
