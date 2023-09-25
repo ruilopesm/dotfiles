@@ -3,11 +3,11 @@
 
 [include]
   path = ~/.config/git/personal.config
- 
+
 [core]
   editor = nvim
   pager = delta
- 
+
 [delta]
   light = false
   features = decorations
@@ -20,10 +20,10 @@
 
 [init]
   defaultBranch = main
- 
+
 [commit]
-  gpgsign = true
- 
+	gpgsign = true
+
 [push]
   default = simple
   autoSetupRemote = true
@@ -33,7 +33,7 @@
 
 [tag]
   gpgsign = true
- 
+
 [log]
   date = auto:human
 
