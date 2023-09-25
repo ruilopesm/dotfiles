@@ -1,5 +1,6 @@
 [user]
   name = Rui Lopes
+  email = ruilopesm19@gmail.com
 
 [include]
   path = ~/.config/git/personal.config
@@ -37,7 +38,7 @@
 [log]
   date = auto:human
 
-[url "git@github.com:RuiL1904/"]
+[url "git@github.com:ruilopesm/"]
   insteadOf = gh:
 
 [url "git@github.com:"]
