@@ -15,7 +15,7 @@ alias mes="mix ecto.seed"
 # npm
 alias nd="npm run dev"
 alias nb="npm run build"
-alias nf="npm run format"
+alias nf="npm run format:fix"
 alias nt="npm run test"
 alias ni="npm install"
 
