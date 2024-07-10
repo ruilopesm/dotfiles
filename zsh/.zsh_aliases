@@ -10,22 +10,31 @@ alias mdg="mix deps.get"
 alias mcom="mix do clean, compile"
 alias mer="mix ecto.reset"
 alias mem="mix ecto.migrate"
-alias mes="mix ecto.seed"
+alias mes="mix ecto.setup"
+alias mee="mix ecto.seed"
 
 # npm
+alias nr="npm run"
+alias ns="npm start"
 alias nd="npm run dev"
 alias nb="npm run build"
-alias nf="npm run format:fix"
+alias nf="npm run format"
+alias nfix="npm run format:fix"
 alias nt="npm run test"
 alias ni="npm install"
 
 # mssql
 alias sqlcmd="sqlcmd -C"
 
+# dotnet
+alias dwr="dotnet watch run"
+
 # others
 alias ls="exa"
 alias cat="bat"
 alias q="exit"
 alias c="clear"
+alias history="history 1"
 alias h="history"
 alias firefox="firefox developer-edition"
+alias files="nemo . & disown"
