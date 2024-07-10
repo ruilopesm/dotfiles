@@ -1,0 +1,75 @@
+import = [
+    "~/.config/alacritty/themes/alacritty_0_12.toml"
+]
+
+[shell]
+program = "/bin/zsh"
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.5"
+
+[window]
+dynamic_padding = false
+decorations = "None"
+opacity = 0.7
+startup_mode = "Windowed"
+dynamic_title = false
+
+[window.padding]
+x = 5
+y = 5
+
+[scrolling]
+history = 20000
+multiplier = 3
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Fira Code"
+style = "Regular"
+
+[font.bold]
+family = "Fira Code"
+style = "Bold"
+
+[font.italic]
+family = "Fira Code"
+style = "Light"
+
+[font.offset]
+x = 0
+y = 0
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[bell]
+animation = "EaseOut"
+duration = 0
+color = "0xffffff"
+
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[cursor]
+unfocused_hollow = true
+thickness = 0.15
+
+[cursor.style]
+shape = "Beam"
+blinking = "Off"
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
