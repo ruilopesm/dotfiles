@@ -50,3 +50,9 @@ function clonecd() {
 function pr() {
   gh pr checkout $1
 }
+
+# Copies the given file contents to the clipboard
+function copy() {
+    xclip -sel clip $1
+}
+
