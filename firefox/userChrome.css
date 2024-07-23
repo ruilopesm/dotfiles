@@ -6,3 +6,7 @@
   display: none;
 }
 
+#PlacesToolbarItems {
+  display: flex !important;
+  justify-content: center !important;
+}
