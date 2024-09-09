@@ -1,6 +1,7 @@
 # mix
 alias im="iex -S mix"
 alias ims="iex -S mix phx.server"
+alias mse="mix setup"
 alias ms="mix phx.server"
 alias mc="mix check"
 alias mf="mix format"
