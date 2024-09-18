@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrant configuration standard version 2
+Vagrant.configure("2") do |config|
+  config.vm.box = "tknerr/ubuntu2004-desktop"
+
+  config.vm.provider "vmware_desktop" do |vw|
+    vw.force_vmware_license = "workstation"
+    vw.gui = true
+    vw.memory = "4096"
+    vw.cpus = 2
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get -y upgrade
+  SHELL
+end
