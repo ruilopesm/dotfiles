@@ -20,7 +20,7 @@ function weather() {
 
 # Shows a list with the most used commands (argument: number of most used commands)
 function topcmd() {
-    history | awk '{print $3}' | sort | uniq -c | sort -nr | column -t | nl | head -n$1
+    history | awk '{print $2}' | sort | uniq -c | sort -nr | column -t | nl | head -n$1
 }
 
 # Creates a folder and changes the directory into it (argument: folder name)
