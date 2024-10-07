@@ -42,3 +42,4 @@ alias files="nemo . & disown"
 
 # fixes
 alias pt="setxkbmap pt"
+alias df="df -h -x tmpfs"
