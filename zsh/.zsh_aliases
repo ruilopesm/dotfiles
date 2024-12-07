@@ -31,7 +31,7 @@ alias sqlcmd="sqlcmd -C"
 alias dwr="dotnet watch run"
 
 # others
-alias ls="exa"
+alias ls="eza"
 alias cat="bat"
 alias q="exit"
 alias c="clear"
