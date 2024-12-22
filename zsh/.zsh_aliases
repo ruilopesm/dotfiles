@@ -43,3 +43,4 @@ alias files="nemo . & disown"
 # fixes
 alias pt="setxkbmap pt"
 alias df="df -h -x tmpfs"
+alias nosuspend="xset s off & xset -dpms"
