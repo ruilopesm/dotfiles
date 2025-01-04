@@ -1,7 +1,3 @@
-[user]
-  name = Rui Lopes
-  email = ruilopesm19@gmail.com
-
 [include]
   path = ~/.config/git/personal.config
 
@@ -43,4 +39,3 @@
 
 [url "git@github.com:"]
   insteadOf = ghx:
-
