@@ -1,9 +1,7 @@
+[general]
 import = [
-    "~/.config/alacritty/themes/alacritty_0_12.toml"
+    "themes/alacritty_0_12.toml"
 ]
-
-[shell]
-program = "/bin/zsh"
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.5"
@@ -11,7 +9,7 @@ WINIT_X11_SCALE_FACTOR = "1.5"
 [window]
 dynamic_padding = false
 decorations = "None"
-opacity = 0.7
+opacity = 0.9
 startup_mode = "Windowed"
 dynamic_title = false
 
@@ -72,4 +70,3 @@ hide_when_typing = true
 [[mouse.bindings]]
 action = "PasteSelection"
 mouse = "Middle"
-
