@@ -41,6 +41,7 @@ alias history="history 1"
 alias h="history"
 alias firefox="firefox developer-edition"
 alias files="nemo . & disown"
+alias diskusage="gdu"
 
 # fixes
 alias pt="setxkbmap pt"
