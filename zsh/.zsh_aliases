@@ -13,6 +13,8 @@ alias mer="mix ecto.reset"
 alias mem="mix ecto.migrate"
 alias mes="mix ecto.setup"
 alias mee="mix ecto.seed"
+alias mec="mix ecto.create"
+alias med="mix ecto.drop"
 
 # npm
 alias nr="npm run"
