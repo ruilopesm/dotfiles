@@ -26,6 +26,9 @@ alias nfix="npm run format:fix"
 alias nt="npm run test"
 alias ni="npm install"
 
+# bun
+alias bd="bun dev"
+
 # mssql
 alias sqlcmd="sqlcmd -C"
 
