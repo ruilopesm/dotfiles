@@ -28,6 +28,7 @@ alias ni="npm install"
 
 # bun
 alias bd="bun dev"
+alias bf="bun format"
 
 # mssql
 alias sqlcmd="sqlcmd -C"
