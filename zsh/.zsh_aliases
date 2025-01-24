@@ -46,6 +46,8 @@ alias h="history"
 alias firefox="firefox developer-edition"
 alias files="nemo . & disown"
 alias diskusage="gdu"
+alias labup="nmcli connection up HASLab"
+alias labdown="nmcli connection down HASLab"
 
 # fixes
 alias pt="setxkbmap pt"
