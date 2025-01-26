@@ -1,13 +1,10 @@
 #! /bin/sh
 
-if [ -x $HOME/dotfiles/scripts/monitor-setup ]; then
-    sh $HOME/dotfiles/scripts/monitor-setup
-fi
+# scripts
+sh $HOME/dotfiles/scripts/monitor-setup
+sh $HOME/.config/polybar/launcher.sh
 
-if [ -x /usr/local/bin/polybar ]; then
-    sh $HOME/.config/polybar/launcher.sh
-fi
-
+# sxhkd and bspwm
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
@@ -21,18 +18,21 @@ bspc config gapless_monocle true
 bspc config focus_follows_pointer true
 bspc config remove_unplugged_monitors true
 
+# misc apps
 picom & disown
 blugon --setcurrent 4500
 sh $HOME/.fehbg
-
 sh $HOME/.config/polybar/launcher.sh
 
+# rules
 xsetroot -cursor_name left_ptr
 setxkbmap pt
 xbindkeys --file $HOME/.xbindkeysrc
 
+# system tray
 nm-applet & disown
 blueman-applet & disown
-optimus-manager-qt & disown
+tailscale-systray & disown
 
+# auth
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
