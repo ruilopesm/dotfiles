@@ -32,7 +32,7 @@ xbindkeys --file $HOME/.xbindkeysrc
 # system tray
 nm-applet & disown
 blueman-applet & disown
-tailscale-systray & disown
+sh $HOME/dotfiles/scripts/tailscale-systray-startup
 
 # auth
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
