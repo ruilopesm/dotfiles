@@ -48,8 +48,8 @@ alias firefox="firefox developer-edition"
 # misc
 alias files="nemo . & disown"
 alias diskusage="gdu"
-alias labup="nmcli connection up HASLab"
-alias labdown="nmcli connection down HASLab"
+alias labup="nmcli connection up 'HASLab VPN'"
+alias labdown="nmcli connection down 'HASLab VPN'"
 alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
 
 # fixes
