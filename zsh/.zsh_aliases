@@ -46,7 +46,7 @@ alias h="history"
 alias firefox="firefox developer-edition"
 
 # misc
-alias files="nemo . & disown"
+alias files="nemo . > /dev/null & disown"
 alias diskusage="gdu"
 alias labup="nmcli connection up 'HASLab VPN'"
 alias labdown="nmcli connection down 'HASLab VPN'"
