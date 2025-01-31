@@ -48,7 +48,7 @@ function clonecd() {
 
 # Changes the current branch into a given PR branch (argument: PR number)
 function pr() {
-  gh pr checkout $1
+    gh pr checkout $1
 }
 
 # Copies the given file contents to the clipboard
@@ -56,3 +56,8 @@ function copy() {
     xclip -sel clip $1
 }
 
+# Commits with a specific backup message (used in obsidian vault)
+function gcdatetime() {
+    local timestamp=$(TZ='Europe/Lisbon' date '+%d-%m-%Y %H:%M:%S')
+    git commit -m "backup: $timestamp @ $(hostname)"
+}
