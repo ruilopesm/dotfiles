@@ -23,6 +23,7 @@ picom & disown
 blugon --setcurrent 4500
 sh $HOME/.fehbg
 sh $HOME/.config/polybar/launcher.sh
+emote & disown
 
 # rules
 xsetroot -cursor_name left_ptr
