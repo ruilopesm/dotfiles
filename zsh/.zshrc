@@ -37,8 +37,9 @@ export PATH=$HOME/.local/share:$PATH
 export PATH=$HOME/dotfiles/scripts:$PATH
 
 # asdf
-. /opt/asdf-vm/asdf.sh
 ASDF_DIRENV_IGNORE_MISSING_PLUGINS=1
+ASDF_DATA_DIR="/home/rui/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
