@@ -36,16 +36,15 @@ alias sqlcmd="sqlcmd -C"
 # dotnet
 alias dwr="dotnet watch run"
 
-# others
+# alternatives
 alias ls="eza"
 alias cat="bat"
-alias q="exit"
-alias c="clear"
-alias history="history 1"
-alias h="history"
-alias firefox="firefox developer-edition"
+alias du="dust"
 
 # misc
+alias q="exit"
+alias c="clear"
+alias firefox="firefox developer-edition"
 alias files="nemo . > /dev/null & disown"
 alias diskusage="gdu"
 alias labup="nmcli connection up 'HASLab VPN'"
@@ -53,6 +52,8 @@ alias labdown="nmcli connection down 'HASLab VPN'"
 alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
 
 # fixes
+alias history="history 1"
+alias h="history"
 alias pt="setxkbmap pt"
 alias df="df -h -x tmpfs"
 alias nosuspend="xset s off & xset -dpms"
