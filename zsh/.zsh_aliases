@@ -30,12 +30,6 @@ alias ni="npm install"
 alias bd="bun dev"
 alias bf="bun format"
 
-# mssql
-alias sqlcmd="sqlcmd -C"
-
-# dotnet
-alias dwr="dotnet watch run"
-
 # alternatives
 alias ls="eza"
 alias cat="bat"
