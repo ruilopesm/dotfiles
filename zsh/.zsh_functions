@@ -1,17 +1,7 @@
-# University #
-
-# Compiles and runs a C program (argument: C filename)
-function run() {
-    gcc "$1" -o main -std=c11 -Wall -Wextra -pedantic -O2 -lm
-    ./main
-}
-
 # Downloads a file from blackboard using wget (argument: link to the file)
 fuction bb_down() {
     wget --user=PG56009 --ask-password $1
 }
-
-# Other #
 
 # Shows weather of specified location (argument: location)
 function weather() {
