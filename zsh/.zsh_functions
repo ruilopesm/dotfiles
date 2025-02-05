@@ -8,7 +8,7 @@ function run() {
 
 # Downloads a file from blackboard using wget (argument: link to the file)
 fuction bb_down() {
-    wget --user=A100643 --ask-password $1
+    wget --user=PG56009 --ask-password $1
 }
 
 # Other #
