@@ -41,9 +41,13 @@ alias c="clear"
 alias firefox="firefox developer-edition"
 alias files="nemo . > /dev/null & disown"
 alias diskusage="gdu"
-alias labup="nmcli connection up 'HASLab VPN'"
-alias labdown="nmcli connection down 'HASLab VPN'"
 alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
+
+# lab
+alias labvup="nmcli connection up 'HASLab VPN'"
+alias labvdown="nmcli connection down 'HASLab VPN'"
+alias labcup="nmcli connection up 'HASLab Net'"
+alias labcdown="nmcli connection down 'HASLab Net'"
 
 # fixes
 alias history="history 1"
