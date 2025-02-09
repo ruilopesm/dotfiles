@@ -58,5 +58,18 @@
     },
     {   "key": "ctrl+up",    
         "command": "workbench.action.toggleMaximizedPanel" 
+    },
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.revealDefinition"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "markdown.showPreview"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-markdown.showPreview",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
     }
 ]

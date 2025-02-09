@@ -1,75 +1,236 @@
 {
-    "git.autofetch": true,
-    "files.autoSave": "afterDelay",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.donotVerifyTags": true,
+    // editor, workspace, workbench, window and explorer
+    "editor.fontFamily": "Fira Code, monospaced",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.tokenColorCustomizations": {
+        "[Material Night Eighties]": {
+            "comments": "#76bb87"
+        },
+        "[One Dark Pro Darker]": {
+            "comments": "#76bb87"
+        }
+    },
+    "editor.lightbulb.enabled": "off",
+    "editor.insertSpaces": true,
+    "editor.indentSize": "tabSize",
+    "editor.detectIndentation": true,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.languageServer": "Default",
-    "launch": {
-
-        "configurations": [],
-        "compounds": []
-    },
-    "terminal.external.linuxExec": "x-terminal-emulator",
-    "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook",
-        "*.pdf": "latex-workshop-pdf-hook"
-    },
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "security.workspace.trust.untrustedFiles": "open",
-    "explorer.compactFolders": false,
-    "workbench.startupEditor": "none",
-    "dashboard.projectData": null,
-    "terminal.explorerKind": "external",
-    "explorer.confirmDelete": false,
+    "editor.inlayHints.enabled": "off",
     "editor.bracketPairColorization.enabled": true,
     "editor.copyWithSyntaxHighlighting": false,
-    "editor.fontLigatures": true,
-    "bookmarks.saveBookmarksInProject": true,
-    "python.envFile": "${workspaceFolder}/data/.env",
-    "python.analysis.completeFunctionParens": true,
+    "editor.fontLigatures": false,
+    "editor.minimap.enabled": false,
+    "editor.cursorBlinking": "phase",
+    "editor.inlineSuggest.enabled": true,
+    "editor.codeLens": false,
+    "editor.semanticHighlighting.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.startupEditor": "none",
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.labelFormat": "short",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.externalBrowser": "firefox-developer-edition",
+    "workbench.sideBar.location": "right",
+    "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "package.json": "pnpm-lock*, package-lock*, bun.lockb",
+        "tailwind.config.*": "tailwind.config*, postcss.config*",
+        ".env": ".env.*, .envrc",
+        ".env.local": ".env*",
+        ".env.dev": ".env*",
+        "README.*": "LICENSE*, CONTRIBUTING*, CODE_OF_CONDUCT*, REQUIREMENTS*, DEV*",
+        "mix.exs": "mix.lock",
+        "Dockerfile*": "Dockerfile.*, docker-compose*, .dockerignore, linux.yml, windows.yml, mac.yml, darwin.yml",
+        ".pre-commit-config*": ".pre-commit-*",
+        "requirements.txt": "requirements-dev.txt",
+        "gradlew": "build.gradle*, gradlew*, settings.gradle*",
+        "Cargo.toml": "Cargo.lock",
+        "appsettings.json": "appsettings.*.json",
+        "diagrams.vpp": "diagrams.vpp.bak*",
+        ".npmrc": ".npmrc.*, .nvmrc",
+        "next.*": "next-*",
+        ".gitignore": ".gitattributes",
+        "CMakeLists.txt": "CMakeCache.txt",
+        "vcpkg.json": "vcpkg*",
+        ".formatter.exs": ".credo.exs"
+    },
+    "files.autoSave": "afterDelay",
+    "window.titleBarStyle": "native",
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "compact",
+    "window.zoomLevel": 1,
+    "window.customTitleBarVisibility": "never",
+
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/parser.out": true,
+        "**/parsetab.py": true,
+        "**/.venv": true,
+        "**/obj": true,
+        "**/.next": true,
+        "**/.elixir_ls": true,
+        "**/deps": true,
+        "**/_build": true,
+        "**/.turbo": true,
+        "**/.astro": true,
+        "**/CMakeFiles/": true,
+        "**/vcpkg_installed/": true,
+        "**/build/": true,
+        "**/.vagrant/": true,
+        "**/.vscode/": true,
+        "**/target/": true,
+        "**/dist/": true
+    },
+
+    // terminal
+    "terminal.external.linuxExec": "x-terminal-emulator",
+    "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
+    "terminal.explorerKind": "external",
     "terminal.integrated.defaultProfile.linux": "zsh",
-    "discord.lowerDetailsDebugging": "Workspace: {workspace}",
-    "discord.removeRemoteRepository": true,
-    "python.analysis.autoImportCompletions": false,
+    "terminal.integrated.showExitAlert": false,
+
+    // git
+    "git.autofetch": true,
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.defaultDateFormat": null,
     "gitlens.statusBar.enabled": false,
     "gitlens.codeLens.enabled": false,
-    "workbench.productIconTheme": "material-product-icons",
-    "editor.fontFamily": "Fira Code, monospace",
-    "editor.cursorSmoothCaretAnimation": true,
-    "workbench.colorTheme": "Material Night Eighties",
-    "editor.tokenColorCustomizations": {
-        "[Material Night Eighties]": {
-            "comments": "#76bb87"
-        }
+    "git.openRepositoryInParentFolders": "never",
+
+    // extensions
+    "extensions.ignoreRecommendations": true,
+
+    // vim keybinds
+    "vim.handleKeys": {
+        "<C-w>": false,
+        "<C-k>": false,
+        "<C-c>": false,
+        "<C-p>": false,
+        "<C-d>": false
     },
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.cursorBlinking": "phase",
-    "thunder-client.codeSnippetLanguage": "python-requests",
-    "editor.inlineSuggest.enabled": true,
+
+    // python
+    "python.languageServer": "Default",
+    "python.envFile": "${workspaceFolder}/data/.env",
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.autoImportCompletions": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+
+    // c and c++
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2 }",
+    "C_Cpp.doxygen.generatedStyle": "/**",
+    "C_Cpp.default.enableConfigurationSquiggles": false,
+    "[makefile]": {
+        "editor.inlayHints.enabled": "off"
+    },
+    "cmake.configureSettings": {
+        "CMAKE_TOOLCHAIN_FILE": "/home/rui/Clones/vcpkg/scripts/buildsystems/vcpkg.cmake"
+    },
+
+    // html, css, tailwind and js
+    "html.autoClosingTags": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "css.lint.unknownAtRules": "ignore",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // java
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-23",
+            "path": "/usr/lib/jvm/java-23-openjdk",
+            "default": true
+        }
+    ],
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-23-openjdk",
+    "maven.terminal.useJavaHome": true,
+
+    // emmet
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "phoenix-heex": "html"
+    },
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+
+    // copilot
     "github.copilot.enable": {
         "*": true,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": false,
-        "c": false
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "java": true,
+        "prolog": true,
+        "go": true,
+        "latex": false,
+        "rust": true,
+        "cpp": true,
+        "csv": false,
+        "python": true,
+        "elixir": true,
+        "css": true,
+        "html": true,
+        "json": true,
+        "dockerfile": true,
+        "javascriptreact": true,
+        "typescriptreact": true,
+        "shellscript": true,
+        "ignore": true,
+        "javascript": true,
+        "vue": true,
+        "typescript": true,
+        "jade": true,
+        "typst": true,
+        "c": true,
+        "makefile": true
     },
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
-    "editor.minimap.enabled": false,
-    "workbench.iconTheme": "vscode-great-icons",
-    "vim.handleKeys": {
-        "<C-w>": false
-    },
-    "workbench.sideBar.location": "right",
-    "window.zoomLevel": 1
-}
+    "github.copilot.editor.enableAutoCompletions": true,
 
+    // formatters and linters
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typst]": {
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+    "[typst-code]": {
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    }
+}
