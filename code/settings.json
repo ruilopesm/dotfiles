@@ -87,7 +87,8 @@
         "**/.vagrant/": true,
         "**/.vscode/": true,
         "**/target/": true,
-        "**/dist/": true
+        "**/dist/": true,
+        "**/.ruff_cache/": true
     },
 
     // terminal
