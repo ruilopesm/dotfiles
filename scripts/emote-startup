@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if ! pgrep -x "emote" > /dev/null; then
+    echo "Starting emote..."
+    emote & disown
+else
+    echo "Program emote is already running..."
+fi
