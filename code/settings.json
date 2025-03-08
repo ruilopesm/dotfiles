@@ -214,6 +214,7 @@
         "makefile": true
     },
     "github.copilot.editor.enableAutoCompletions": true,
+    "chat.experimental.statusIndicator.enabled": true,
 
     // formatters and linters
     "[json]": {
