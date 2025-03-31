@@ -51,3 +51,15 @@ function gcdatetime() {
     local timestamp=$(TZ='Europe/Lisbon' date '+%d-%m-%Y %H:%M:%S')
     git commit -m "backup: $timestamp @ $(hostname)"
 }
+
+# Rescues a given file from the Downloads folder
+function rescue() {
+  local src
+  if [ $# -gt 0 ]; then
+    src=~/Downloads/"$1"
+  else
+    src=$(find ~/Downloads -maxdepth 1 -type f | fzf --prompt="Select a file to rescue: ")
+    [ -z "$src" ] && { echo "No file selected"; return 1; }
+  fi
+  mv "$src" .
+}
