@@ -87,7 +87,6 @@
         "**/.vagrant/": true,
         "**/.vscode/": true,
         "**/target/": true,
-        "**/dist/": true,
         "**/.ruff_cache/": true
     },
 
@@ -211,7 +210,8 @@
         "jade": true,
         "typst": true,
         "c": true,
-        "makefile": true
+        "makefile": true,
+        "erlang": false
     },
     "github.copilot.editor.enableAutoCompletions": true,
     "chat.experimental.statusIndicator.enabled": true,
