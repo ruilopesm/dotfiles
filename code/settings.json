@@ -36,7 +36,7 @@
     "workbench.sideBar.location": "right",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "explorer.compactFolders": false,
+    "explorer.compactFolders": true,
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "package.json": "pnpm-lock*, package-lock*, bun.lockb",
@@ -85,9 +85,9 @@
         "**/vcpkg_installed/": true,
         "**/build/": true,
         "**/.vagrant/": true,
-        "**/.vscode/": true,
+        "**/.ruff_cache/": true,
         "**/target/": true,
-        "**/.ruff_cache/": true
+        "**/*.sage.py": true,
     },
 
     // terminal
@@ -214,7 +214,7 @@
         "erlang": false
     },
     "github.copilot.editor.enableAutoCompletions": true,
-    "chat.experimental.statusIndicator.enabled": true,
+    "chat.agent.enabled": true,
 
     // formatters and linters
     "[json]": {
