@@ -9,9 +9,9 @@ zstyle ':completion:' use-cache on
 ENABLE_CORRECTION="true"
 
 # History
-export HISTFILESIZE=10000000
-export SAVEHIST=100000
-export HISTSIZE=100000
+export HISTFILESIZE=100000000000
+export SAVEHIST=5000000
+export HISTSIZE=5000000
 HIST_STAMPS="%d-%m-%Y"
 
 plugins=(git asdf zsh-autosuggestions colored-man-pages command-not-found zsh-interactive-cd z zsh-syntax-highlighting autoswitch_virtualenv)
