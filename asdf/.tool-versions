@@ -6,3 +6,4 @@ direnv 2.32.3
 java system
 golang system
 rust system
+rebar 3.24.0
