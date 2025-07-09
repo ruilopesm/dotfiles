@@ -1,3 +1,5 @@
+## Misc ##
+
 # Downloads a file from blackboard using wget (argument: link to the file)
 fuction bb_down() {
     wget --user=PG56009 --ask-password $1
@@ -63,4 +65,32 @@ function rescue() {
         src=~/Downloads/"$file"
     fi
     mv "$src" .
+}
+
+## Lab ##
+
+function lab() {
+    local target=$1 action=$2 conn
+    if [[ $target == "vpn" ]]; then
+        conn="HASLab VPN"
+    elif [[ $target == "network" ]]; then
+        conn="HASLab Net"
+    else
+        echo "Usage: lab vpn|network up|down" >&2
+        return 1
+    fi
+
+    if [[ $action == "up" ]]; then
+        nmcli connection up "$conn"
+    elif [[ $action == "down" ]]; then
+        nmcli connection down "$conn"
+    else
+        echo "Usage: lab vpn|network up|down" >&2
+        return 1
+    fi
+}
+
+function remote() {
+    local folder=${1:-thesis}
+    code --folder-uri "vscode-remote://ssh-remote+lab/home/gsd/$folder"
 }
