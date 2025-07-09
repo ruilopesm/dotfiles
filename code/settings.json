@@ -213,7 +213,9 @@
         "makefile": true,
         "erlang": false
     },
-    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableAutoCompletions": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.nextEditSuggestions.fixes": false,
     "chat.agent.enabled": true,
 
     // formatters and linters
