@@ -94,3 +94,28 @@ function remote() {
     local folder=${1:-thesis}
     code --folder-uri "vscode-remote://ssh-remote+lab/home/gsd/$folder"
 }
+
+function to() {
+  local host dir choice
+  if [ -z "$1" ]; then
+    echo "Usage: to user@host" >&2
+    return 1
+  fi
+
+  host=$1
+  dir="."
+
+  while true; do
+    choice=$(find "$dir" -maxdepth 1 ! -path "$dir" -printf "%P\n" \
+             | fzf --prompt="Local [$dir] ▶ " \
+             ) || return 1
+
+    if [ -d "$dir/$choice" ]; then
+      dir="$dir/$choice"
+    else
+      break
+    fi
+  done
+
+  scp "$dir/$choice" "$host:."
+}
