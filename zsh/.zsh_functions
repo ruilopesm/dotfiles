@@ -119,3 +119,29 @@ function to() {
 
   scp "$dir/$choice" "$host:."
 }
+
+function from() {
+  local host dir choice
+  if [ -z "$1" ]; then
+    echo "Usage: from user@host"
+    return 1
+  fi
+
+  host=$1
+  dir="."
+
+  while true; do
+    choice=$(ssh "$host" \
+      "find '$dir' -maxdepth 1 ! -path '$dir' -printf '%P\n'" \
+      | fzf --prompt="Remote [$host:$dir] ▶ " \
+    ) || return 1
+
+    if ssh "$host" "[ -d '$dir/$choice' ]"; then
+      dir="$dir/$choice"
+    else
+      break
+    fi
+  done
+
+  scp "$host:$dir/$choice" .
+}
