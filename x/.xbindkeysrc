@@ -1,40 +1,63 @@
-# Increase volume
+## Default ##
+
 "pactl set-sink-volume @DEFAULT_SINK@ +2000"
     m:0x0 + c:123
-    XF86AudioRaiseVolume # FN + F7
+    F7
+    XF86AudioRaiseVolume
 
-# Decrease volume
 "pactl set-sink-volume @DEFAULT_SINK@ -2000"
     m:0x0 + c:122
-    XF86AudioLowerVolume # FN + F6
+    F6
+    XF86AudioLowerVolume
 
-# Toggle mute
 "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     m:0x0 + c:121
-    XF86AudioMute # FN + F5
+    F5
+    XF86AudioMute
 
-# Toggle music
 "playerctl --player=spotify play-pause"
     m:0x41 + c:33
-    Shift + Mod4 + p # MOD + SHIFT + p
+    Shift + Mod4 + p # Super + Shift + P
 
-# Increase brightness
-"xbacklight -inc 10"
-    m:0x0 + c:233
-    XF86MonBrightnessUp # FN + F2
-
-# Decrease brightness
 "xbacklight -dec 10"
     m:0x0 + c:232
-    XF86MonBrightnessDown # FN + F2
+    F1
+    XF86MonBrightnessDown
 
-# Open flameshot
+"xbacklight -inc 10"
+    m:0x0 + c:233
+    F2
+    XF86MonBrightnessUp
+
 "flameshot gui"
     m:0x14 + c:115
-    Control + Mod2 + End # CTRL + PRT SC
+    Control + Mod2 + End # Ctrl + Prt Sc
 
-# Open power menu
 "sh $HOME/.config/rofi/power-menu/power-menu.sh"
     m:0x4 + c:49
-    Control + backslash # CTRL + Backslash
+    Control + backslash
 
+## Tinker ##
+
+"pactl set-sink-volume @DEFAULT_SINK@ +2000"
+    m:0x0 + c:73
+    F7
+    XF86AudioRaiseVolume
+
+"pactl set-sink-volume @DEFAULT_SINK@ -2000"
+    m:0x0 + c:72
+    F6
+    XF86AudioLowerVolume
+
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    m:0x0 + c:71
+    F5
+    XF86AudioMute
+
+"flameshot gui"
+    m:0x4 + c:21
+    Control + guillemotleft # Ctrl + «»
+
+"sh $HOME/.config/rofi/power-menu/power-menu.sh"
+    m:0x4 + c:23
+    Control + Tab
