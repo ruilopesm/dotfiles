@@ -38,6 +38,7 @@ alias du="dust"
 # misc
 alias q="exit"
 alias c="clear"
+alias nv="nvim"
 alias firefox="firefox developer-edition"
 alias files="nemo . > /dev/null & disown"
 alias diskusage="gdu"
