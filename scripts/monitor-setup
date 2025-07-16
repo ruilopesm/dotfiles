@@ -2,9 +2,11 @@
 
 case "$(xrandr -q | grep -w connected | wc -l)" in
     1)
-	xrandr --output eDP-1 --mode 1920x1080 --rotate normal --refresh 60 --output HDMI-1-0 --off
-	;;
+        xrandr --output eDP-1 --mode 1920x1080 --rotate normal --refresh 60 --output HDMI-1-0 --off
+        bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
+        ;;
     2)
-	xrandr --output eDP-1 --mode 1920x1080 --rotate normal --refresh 60 --output HDMI-1-0 --mode 1920x1080 --rotate normal --refresh 60 --right-of eDP-1
+        xrandr --output eDP-1 --mode 1920x1080 --rotate normal --refresh 60 --output HDMI-1-0 --mode 1920x1080 --rotate normal --refresh 60 --left-of eDP-1
+        bspc monitor HDMI-1-0 -d I II III IV V VI VII VIII IX X
         ;;
 esac
