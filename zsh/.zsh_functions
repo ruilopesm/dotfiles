@@ -1,7 +1,7 @@
 ## Misc ##
 
 # Downloads a file from blackboard using wget (argument: link to the file)
-fuction bb_down() {
+function bb_down() {
     wget --user=PG56009 --ask-password $1
 }
 
@@ -43,7 +43,7 @@ function pr() {
     gh pr checkout $1
 }
 
-# Copies the given file contents to the clipboard
+# Copies the given file contents to the clipboard (argument: filename)
 function copy() {
     xclip -sel clip $1
 }
@@ -54,7 +54,7 @@ function gcdatetime() {
     git commit -m "backup: $timestamp @ $(hostname)"
 }
 
-# Rescues a given file from the Downloads folder
+# Rescues a given file from the Downloads folder (procedure only)
 function rescue() {
     local src
     if [ $# -gt 0 ]; then
@@ -64,7 +64,19 @@ function rescue() {
         [ -z "$file" ] && return 1
         src=~/Downloads/"$file"
     fi
+
     mv "$src" .
+}
+
+# Searches for a given content in the current directory and opens VSCode on selected
+# line (procedure only)
+function lupa() {
+    rg --column --line-number --no-heading --color=always --smart-case --ignore-file .gitignore .
+    | fzf --ansi \
+       --bind 'enter:become(code --goto {1}:{2})' \
+       --delimiter : \
+       --preview 'bat --style=full --color=always --highlight-line {2} {1}' \
+       --preview-window '~4,+{2}+4/3,<80(up)'
 }
 
 ## Lab ##
