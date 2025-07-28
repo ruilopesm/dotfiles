@@ -71,8 +71,7 @@ function rescue() {
 # Searches for a given content in the current directory and opens VSCode on selected
 # line (procedure only)
 function lupa() {
-    rg --column --line-number --no-heading --color=always --smart-case --ignore-file .gitignore .
-    | fzf --ansi \
+    rg --column --line-number --no-heading --color=always --smart-case --ignore-file .gitignore . | fzf --ansi \
        --bind 'enter:become(code --goto {1}:{2})' \
        --delimiter : \
        --preview 'bat --style=full --color=always --highlight-line {2} {1}' \
