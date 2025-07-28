@@ -45,14 +45,14 @@
         ".env.local": ".env*",
         ".env.dev": ".env*",
         "README.*": "LICENSE*, CONTRIBUTING*, CODE_OF_CONDUCT*, REQUIREMENTS*, DEV*",
-        "mix.exs": "mix.lock",
-        "Dockerfile*": "Dockerfile.*, docker-compose*, .dockerignore, linux.yml, windows.yml, mac.yml, darwin.yml",
+        "mix.exs": "mix.lock, .iex.exs",
+        "Dockerfile*": "Dockerfile*, docker-compose.*",
+        "docker-compose.*": "docker-compose.*, .dockerignore, linux.yml, windows.yml, mac.yml, darwin.yml",
         ".pre-commit-config*": ".pre-commit-*",
         "requirements.txt": "requirements-dev.txt",
         "gradlew": "build.gradle*, gradlew*, settings.gradle*",
         "Cargo.toml": "Cargo.lock",
         "appsettings.json": "appsettings.*.json",
-        "diagrams.vpp": "diagrams.vpp.bak*",
         ".npmrc": ".npmrc.*, .nvmrc",
         "next.*": "next-*",
         ".gitignore": ".gitattributes",
@@ -88,6 +88,8 @@
         "**/.ruff_cache/": true,
         "**/target/": true,
         "**/*.sage.py": true,
+        "**/*.o": true,
+        "**/*.d": true
     },
 
     // terminal
@@ -138,6 +140,7 @@
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2 }",
     "C_Cpp.doxygen.generatedStyle": "/**",
     "C_Cpp.default.enableConfigurationSquiggles": false,
+    "C_Cpp.dimInactiveRegions": false,
     "[makefile]": {
         "editor.inlayHints.enabled": "off"
     },
