@@ -14,7 +14,7 @@ export SAVEHIST=5000000
 export HISTSIZE=5000000
 HIST_STAMPS="%d-%m-%Y"
 
-plugins=(git asdf zsh-autosuggestions colored-man-pages command-not-found fzf-tab z zsh-syntax-highlighting autoswitch_virtualenv)
+plugins=(git asdf zsh-autosuggestions colored-man-pages command-not-found fzf-tab z autoswitch_virtualenv zsh-syntax-highlighting)
 
 # External files
 source $ZSH/oh-my-zsh.sh
