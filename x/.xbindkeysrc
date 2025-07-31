@@ -34,8 +34,8 @@
     Control + Mod2 + End # Ctrl + Prt Sc
 
 "sh $HOME/.config/rofi/power-menu/power-menu.sh"
-    m:0x4 + c:49
-    Control + backslash
+    m:0x4 + c:9
+    Control + Escape
 
 ## Tinker ##
 
@@ -57,7 +57,3 @@
 "flameshot gui"
     m:0x4 + c:21
     Control + guillemotleft # Ctrl + «»
-
-"sh $HOME/.config/rofi/power-menu/power-menu.sh"
-    m:0x4 + c:23
-    Control + Tab
