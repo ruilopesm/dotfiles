@@ -5,8 +5,7 @@ set spelllang=en
 set hidden
 set mouse=a
 set modelines=0
-set nomodeline
-set relativenumber
+set number
 set guifont=Fira\ Code\ 10
 
 " Shell
