@@ -91,6 +91,9 @@
         "**/*.o": true,
         "**/*.d": true
     },
+    "files.associations": {
+        "*.log.processed": "log"
+    },
 
     // terminal
     "terminal.external.linuxExec": "x-terminal-emulator",
