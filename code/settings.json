@@ -77,7 +77,6 @@
         "**/obj": true,
         "**/.next": true,
         "**/.elixir_ls": true,
-        "**/deps": true,
         "**/_build": true,
         "**/.turbo": true,
         "**/.astro": true,
