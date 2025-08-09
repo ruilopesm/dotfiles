@@ -78,15 +78,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # rust
 . "$HOME/.cargo/env"
 
-# clipcat
-if type clipcat-menu >/dev/null 2>&1; then
-    alias clipedit='clipcat-menu --finder=builtin edit'
-    alias clipdel='clipcat-menu --finder=builtin remove'
-
-    bindkey -s '^\' "^Q clipcat-menu --finder=builtin insert ^J"
-    bindkey -s '^]' "^Q clipcat-menu --finder=builtin remove ^J"
-fi
-
 # pnpm
 export PNPM_HOME="/home/rui/.local/share/pnpm"
 case ":$PATH:" in
