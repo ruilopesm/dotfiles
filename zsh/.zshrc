@@ -86,3 +86,10 @@ if type clipcat-menu >/dev/null 2>&1; then
     bindkey -s '^\' "^Q clipcat-menu --finder=builtin insert ^J"
     bindkey -s '^]' "^Q clipcat-menu --finder=builtin remove ^J"
 fi
+
+# pnpm
+export PNPM_HOME="/home/rui/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
