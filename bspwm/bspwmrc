@@ -34,7 +34,7 @@ nm-applet & disown
 blueman-applet & disown
 sh $HOME/dotfiles/scripts/tailscale-systray-startup
 pgrep -x Telegram >/dev/null || Telegram -startintray & disown
-pgrep -x slack >/dev/null || slack -u & disown
+pgrep -x slack >/dev/null || env GTK_IM_MODULE=ibus QT_IM_MODULE=ibus XMODIFIERS=@im=ibus slack -u --ozone-platform=x11 & disown
 
 # auth
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & disown
