@@ -29,6 +29,7 @@ export SUDO_EDITOR=nvim
 export BROWSER=/usr/bin/firefox-developer-edition
 export TERM=alacritty
 CORRECT_IGNORE_FILE=tests
+CORRECT_IGNORE_FILE=logs
 
 # PATH
 export PATH=~/bin:$PATH
