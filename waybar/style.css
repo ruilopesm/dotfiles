@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code";
+  font-size: 8.5pt;
+  font-weight: 800;
+  transition-property: background;
+  transition-duration: 0.5s;
+  color: #CCCCCC;
+}
+
+tooltip {
+  background: #222222;
+  color: #CCCCCC;
+  padding: 5pt 10pt;
+}
+
+#waybar.top {
+  background: none;
+}
+
+#waybar.top > box.horizontal {
+  background: #000000;
+  padding-top: 2pt;
+}
+
+#custom-linux {
+  margin-left: 8pt;
+  margin-right: 4pt;
+  font-size: 14pt;
+}
+
+#custom-linux:hover {
+  color: #7EB7E2;
+}
+
+#workspaces {
+  margin-left: 12pt;
+}
+
+#workspaces button {
+  color: #888888;
+  padding: 0 5pt;
+}
+
+#workspaces button:not(:first-child) {
+  margin-left: 2pt;
+}
+
+#workspaces button.visible {
+  color: #DDDDDD;
+}
+
+#workspaces button.active {
+  background-color: #222222;
+  border-radius: 2pt;
+}
+
+#workspaces button:hover,
+#workspaces button:focus {
+  background: #111111;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#workspaces button:hover:not(.active):not(.visible),
+#workspaces button:focus:not(.active):not(.visible) {
+  color: #AAAAAA;
+}
+
+#mpris {
+  background: #222222;
+  color: #EEEEEE;
+  border-radius: 2pt;
+  margin-left: 15pt;
+  padding: 0 8pt;
+}
+
+#pulseaudio {
+  margin-right: 8pt;
+}
+
+#pulseaudio.muted {
+  color: #FF1744;
+}
+
+#cpu {
+  margin-right: 8pt;
+}
+
+#memory {
+  margin-right: 8pt;
+}
+
+#battery {
+  margin-right: 0pt;
+}
+
+#battery.full,
+#battery.good,
+#battery.charging,
+#battery.plugged {
+  color: #888888;
+}
+
+#battery.critical:not(.charging) {
+  color: #FFFFFF;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#tray {
+  margin-right: 8pt;
+  margin-left: 12pt;
+  padding-bottom: 3pt;
+}
+
+#tray menu {
+  background: #222222;
+  padding: 2pt;
+}
+
+#tray menu * {
+  margin: 2pt;
+}
+
+#tray menu check {
+  margin-right: 4pt;
+}
+
+@keyframes blink {
+  to {
+    background-color: rgba(30, 34, 42, 0.2);
+    color: #FFFFFF;
+  }
+}

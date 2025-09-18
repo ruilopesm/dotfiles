@@ -1,0 +1,76 @@
+[
+  {
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["custom/linux", "hyprland/workspaces", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": [
+      "pulseaudio",
+      "cpu",
+      "memory",
+      "battery",
+      "tray"
+    ],
+    "custom/linux": {
+      "format": "󰣇",
+      "on-click": "walker -n -m menus:power",
+      "tooltip": false
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "all-outputs": false,
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1",
+      "sort-by-number": true
+    },
+    "mpris": {
+      "format": "{artist} - {title}",
+      "tooltip": false,
+      "format-paused": "{status_icon} Paused",
+      "title-len": 50,
+      "status-icons": {
+        "paused": ""
+      }
+    },
+    "clock": {
+      "interval": 1,
+      "tooltip": false,
+      "format": "{:%B %d | %R:%S}",
+      "format-alt": "{:%A, %B %d, %Y | %R:%S}"
+    },
+    "pulseaudio": {
+      "format": "VOL {volume}%",
+      "format-muted": "VOL {volume}%",
+      "format-bluetooth": "XM4 {volume}%",
+      "format-bluetooth-muted": "XM4 {volume}%",
+      "tooltip": true,
+      "on-click": "pwvucontrol",
+      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "scroll-step": "5.0"
+    },
+    "cpu": {
+      "format": "CPU {usage}%",
+      "interval": 1,
+      "tooltip": true
+    },
+    "memory": {
+      "interval": 10,
+      "format": "RAM {used}G",
+      "tooltip": true
+    },
+    "battery": {
+      "format": "BAT {capacity}%",
+      "tooltip": true,
+      "interval": 5,
+      "states": {
+        "good": 70,
+        "warning": 30,
+        "critical": 15
+      }
+    },
+    "tray": {
+      "icon-size": 14,
+      "spacing": 10
+    }
+  }
+]
