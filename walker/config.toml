@@ -1,0 +1,45 @@
+close_when_open = true
+exact_search_prefix = "'"
+theme = "custom"
+disable_mouse = false
+
+[keybinds]
+close = "Escape"
+next = "Down"
+resume_last_query = "ctrl r"
+quick_activate = ["F1", "F2", "F3", "F4"]
+
+[providers]
+default = [
+  "desktopapplications",
+  "calc"
+]
+empty = ["desktopapplications"]
+
+[[providers.prefixes]]
+prefix = ";"
+provider = "providerlist"
+
+[providers.providerlist]
+default = "activate"
+activate = "Return"
+
+[[providers.prefixes]]
+prefix = "="
+provider = "calc"
+
+[providers.calc]
+default = "copy"
+copy = "Return"
+save = "ctrl s"
+delete = "ctrl d"
+
+[[providers.prefixes]]
+prefix = ":"
+provider = "clipboard"
+
+[providers.clipboard]
+time_format = "%d/%m - %H:%M"
+default = "copy"
+copy = "Return"
+delete = "ctrl d"
