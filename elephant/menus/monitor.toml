@@ -1,0 +1,15 @@
+name = "displays"
+name_pretty = "Displays"
+icon = "preferences-desktop-display-randr"
+global_search = false
+fixed_order = true
+
+[[entries]]
+text = "Home"
+icon = "akonadi-phone-home"
+action = "hyprmon --profile home"
+
+[[entries]]
+text = "Laptop"
+icon = "computer-laptop"
+action = "hyprmon --profile laptop"

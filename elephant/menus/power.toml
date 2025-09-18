@@ -1,0 +1,25 @@
+name = "power"
+name_pretty = "Power"
+icon = "system-shutdown"
+global_search = false
+fixed_order = true
+
+[[entries]]
+text = "Shutdown"
+icon = "system-shutdown"
+action = "systemctl poweroff"
+
+[[entries]]
+text = "Reboot"
+icon = "system-reboot"
+action = "systemctl reboot"
+
+[[entries]]
+text = "Lock"
+icon = "system-lock-screen"
+action = "hyprlock"
+
+[[entries]]
+text = "Logout"
+icon = "system-log-out"
+action = "hyprctl dispatch exit"
