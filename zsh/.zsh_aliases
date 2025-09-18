@@ -27,14 +27,10 @@ alias nfix="npm run format:fix"
 alias nt="npm run test"
 alias ni="npm install"
 
-# bun
-alias bd="bun dev"
-alias bf="bun format"
-
 # alternatives
 alias ls="eza"
 alias cat="bat"
-alias du="dust"
+alias diskusage="gdu"
 
 # misc
 alias q="exit"
@@ -42,12 +38,9 @@ alias c="clear"
 alias nv="nvim"
 alias firefox="firefox developer-edition"
 alias files="nemo . > /dev/null & disown"
-alias diskusage="gdu"
 alias birth="stat / | grep 'Birth' | sed 's/Birth: //g' | cut -b 2-11"
 
 # fixes
 alias history="history 1"
 alias h="history"
-alias pt="setxkbmap pt"
 alias df="df -h -x tmpfs"
-alias nosuspend="xset s off & xset -dpms"
