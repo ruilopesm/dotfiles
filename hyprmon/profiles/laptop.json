@@ -1,0 +1,161 @@
+{
+  "name": "laptop",
+  "monitors": [
+    {
+      "Name": "eDP-1",
+      "PxW": 1920,
+      "PxH": 1080,
+      "Hz": 60.008,
+      "Scale": 1,
+      "X": 0,
+      "Y": 0,
+      "Active": true,
+      "EDIDName": "Chimei Innolux Corporation 0x15FE",
+      "Modes": [
+        {
+          "W": 1920,
+          "H": 1080,
+          "Hz": 60.01
+        },
+        {
+          "W": 1920,
+          "H": 1080,
+          "Hz": 40
+        }
+      ],
+      "BitDepth": 0,
+      "ColorMode": "",
+      "SDRBrightness": 0,
+      "SDRSaturation": 0,
+      "VRR": 0,
+      "Transform": 0,
+      "Dragging": false,
+      "DragOffX": 0,
+      "DragOffY": 0
+    },
+    {
+      "Name": "HDMI-A-2",
+      "PxW": 1920,
+      "PxH": 1080,
+      "Hz": 74.973,
+      "Scale": 1,
+      "X": 1920,
+      "Y": 0,
+      "Active": false,
+      "EDIDName": "Huawei Technologies Co. Inc. HUAWEI AD80HW",
+      "Modes": [
+        {
+          "W": 1920,
+          "H": 1080,
+          "Hz": 74.97
+        },
+        {
+          "W": 1920,
+          "H": 1080,
+          "Hz": 60
+        },
+        {
+          "W": 1920,
+          "H": 1080,
+          "Hz": 59.94
+        },
+        {
+          "W": 1920,
+          "H": 1080,
+          "Hz": 50
+        },
+        {
+          "W": 1600,
+          "H": 900,
+          "Hz": 60
+        },
+        {
+          "W": 1280,
+          "H": 1024,
+          "Hz": 75.03
+        },
+        {
+          "W": 1280,
+          "H": 1024,
+          "Hz": 60.02
+        },
+        {
+          "W": 1152,
+          "H": 864,
+          "Hz": 75
+        },
+        {
+          "W": 1280,
+          "H": 720,
+          "Hz": 60
+        },
+        {
+          "W": 1280,
+          "H": 720,
+          "Hz": 59.94
+        },
+        {
+          "W": 1280,
+          "H": 720,
+          "Hz": 50
+        },
+        {
+          "W": 1024,
+          "H": 768,
+          "Hz": 75.03
+        },
+        {
+          "W": 1024,
+          "H": 768,
+          "Hz": 60
+        },
+        {
+          "W": 800,
+          "H": 600,
+          "Hz": 75
+        },
+        {
+          "W": 800,
+          "H": 600,
+          "Hz": 60.32
+        },
+        {
+          "W": 720,
+          "H": 576,
+          "Hz": 50
+        },
+        {
+          "W": 720,
+          "H": 480,
+          "Hz": 59.94
+        },
+        {
+          "W": 640,
+          "H": 480,
+          "Hz": 75
+        },
+        {
+          "W": 640,
+          "H": 480,
+          "Hz": 59.94
+        },
+        {
+          "W": 640,
+          "H": 480,
+          "Hz": 59.93
+        }
+      ],
+      "BitDepth": 0,
+      "ColorMode": "",
+      "SDRBrightness": 0,
+      "SDRSaturation": 0,
+      "VRR": 0,
+      "Transform": 0,
+      "Dragging": false,
+      "DragOffX": 0,
+      "DragOffY": 0
+    }
+  ],
+  "created_at": "2025-09-13T19:22:04.751464079+01:00",
+  "updated_at": "2025-09-16T18:08:27.38391137+01:00"
+}
