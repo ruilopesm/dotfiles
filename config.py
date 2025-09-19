@@ -227,12 +227,12 @@ def _install_package(package: Package, console: Console) -> Optional[Installatio
     except subprocess.CalledProcessError as e:
         error_message = f"Failed to install {package.name} (exit code {e.returncode})"
         console.print(f"[red]✗[/red] {error_message}")
-        return InstallationError("package", package.name, error_message)
+        return InstallationError(ItemType.PACKAGE, package.name, error_message)
 
     except FileNotFoundError:
         error_message = "yay not found. Please install yay first"
         console.print(f"[red]✗[/red] {error_message}")
-        return InstallationError("package", package.name, error_message)
+        return InstallationError(ItemType.PACKAGE, package.name, error_message)
 
 def _execute_hook(hook: Hook, console: Console) -> Optional[InstallationError]:
     console.print(f"Executing {hook}...")
@@ -247,12 +247,12 @@ def _execute_hook(hook: Hook, console: Console) -> Optional[InstallationError]:
     except subprocess.CalledProcessError as e:
         error_message = f"{hook.path} failed with exit code {e.returncode}"
         console.print(f"[red]✗[/red] {error_message}")
-        return InstallationError("hook", hook.path, error_message)
+        return InstallationError(ItemType.HOOK, hook.path, error_message)
 
     except FileNotFoundError:
         error_message = f"Hook script not found: {hooks_directory}/{hook.path}"
         console.print(f"[red]✗[/red] {error_message}")
-        return InstallationError("hook", hook.path, error_message)
+        return InstallationError(ItemType.HOOK, hook.path, error_message)
 
 def _create_symlink(symlink: Symlink, console: Console) -> Optional[InstallationError]:
     console.print(f"Creating symlink {symlink}...")
@@ -265,7 +265,7 @@ def _create_symlink(symlink: Symlink, console: Console) -> Optional[Installation
         if not source_path.exists():
             error_message = f"Source file not found: {source_path}"
             console.print(f"[red]✗[/red] {error_message}")
-            return InstallationError("symlink", f"{symlink.source} → {symlink.target}", error_message)
+            return InstallationError(ItemType.SYMLINK, f"{symlink.source} → {symlink.target}", error_message)
         
         target_path.parent.mkdir(parents = True, exist_ok = True)
         
@@ -284,9 +284,9 @@ def _create_symlink(symlink: Symlink, console: Console) -> Optional[Installation
     except PermissionError:
         error_message = f"Permission denied creating symlink: {target_path}"
         console.print(f"[red]✗[/red] {error_message}")
-        return InstallationError("symlink", f"{symlink.source} → {symlink.target}", error_message)
+        return InstallationError(ItemType.SYMLINK, f"{symlink.source} → {symlink.target}", error_message)
 
     except OSError as e:
         error_message = f"Failed to create symlink: {e}"
         console.print(f"[red]✗[/red] {error_message}")
-        return InstallationError("symlink", f"{symlink.source} → {symlink.target}", error_message)
+        return InstallationError(ItemType.SYMLINK, f"{symlink.source} → {symlink.target}", error_message)
