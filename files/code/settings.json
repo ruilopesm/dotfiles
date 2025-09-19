@@ -209,6 +209,9 @@
     "github.copilot.chat.codeGeneration.useInstructionFiles": true,
     "github.copilot.enable": {
         "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
     },
     "github.copilot.editor.enableAutoCompletions": false,
     "github.copilot.nextEditSuggestions.enabled": false,

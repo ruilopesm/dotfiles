@@ -2,12 +2,12 @@
 🐧 dotfiles installation and configuration script
 
 Usage:
-  ./install --machine <name>
+  ./install [--machine <name>]
   ./install (-h | --help)
   ./install --version
 
 Options:
-  --machine <name>  Specify machine for specific configurations.
+  --machine <name>  Specify machine for specific configurations (optional).
   -h --help         Show this screen.
   --version         Show version.
 
