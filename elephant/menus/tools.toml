@@ -1,0 +1,15 @@
+name = "tools"
+name_pretty = "Tools"
+icon = "tools"
+global_search = false
+fixed_order = true
+
+[[entries]]
+text = "Screenshot"
+icon = "camera-photo"
+action = "$DOTFILES_DIRECTORY/scripts/screenshot"
+
+[[entries]]
+text = "Color Picker"
+icon = "gtk-color-picker"
+action = "hyprpicker -aq"
