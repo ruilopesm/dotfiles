@@ -1,0 +1,182 @@
+[common]
+hyprland = [
+  "hyprland",
+  { type = "symlink", source = "hypr/hyprland.conf", target = "~/.config/hypr/hyprland.conf" },
+  "hyprpaper",
+  { type = "symlink", source = "hypr/hyprpaper.conf", target = "~/.config/hypr/hyprpaper.conf" },
+  "hyprpicker",
+  "hyprlock",
+  { type = "symlink", source = "hypr/hyprlock.conf", target = "~/.config/hypr/hyprlock.conf" },
+  { type = "symlink", source = "hypr/assets", target = "~/.config/hypr/assets" },
+  "hyprmon-bin",
+  "hyprsunset",
+  { type = "symlink", source = "hypr/hyprsunset.conf", target = "~/.config/hypr/hyprsunset.conf" },
+  "hyprshot",
+  "hyprsysteminfo",
+  "waybar",
+  { type = "symlink", source = "waybar/config.jsonc", target = "~/.config/waybar/config.jsonc" },
+  { type = "symlink", source = "waybar/style.css", target = "~/.config/waybar/style.css" },
+  { type = "symlink", source = "waybar/scripts", target = "~/.config/waybar/scripts" },
+  "waypaper",
+  { type = "symlink", source = "waypaper/config.ini", target = "~/.config/waypaper/config.ini" },
+  "wl-clipboard",
+  "xdg-desktop-portal",
+  "xdg-desktop-portal-hyprland",
+  "xorg-xwayland",
+  { type = "symlink", source = "hypr/xdph.conf", target = "~/.config/hypr/xdph.conf" },
+]
+
+interface = [
+  "brightnessctl",
+  "gtk",
+  "gtk2",
+  "gtk3",
+  { type = "symlink", source = "gtk/3.0/settings.ini", target = "~/.config/gtk-3.0/settings.ini" },
+  { type = "symlink", source = "gtk/3.0/bookmarks", target = "~/.config/gtk-3.0/bookmarks" },
+  "gtk4",
+  { type = "symlink", source = "gtk/4.0/settings.ini", target = "~/.config/gtk-4.0/settings.ini" },
+  "qt5ct",
+  "qt5-wayland",
+  "qt6ct",
+  "qt6-wayland",
+  { type = "symlink", source = "hypr/hyprqt6engine.conf", target = "~/.config/hypr/hyprqt6engine.conf" },
+  "nwg-look",
+  "vimix-cursors",
+  "vimix-icon-theme"
+]
+
+network = [
+  "networkmanager",
+  "networkmanager-applet",
+  "networkmanager-openvpn"
+]
+
+bluetooth = [
+  "bluez",
+  "bluez-utils",
+  { type = "hook", path = "bluetooth.sh" },
+  "blueman"
+]
+
+audio = [
+  "pipewire",
+  "lib32-pipewire",
+  "pipewire-audio",
+  "pipewire-jack",
+  "pipewire-pulse",
+  "playerctl",
+  "pwvucontrol",
+  "wireplumber",
+]
+
+fonts = [
+  "all-repository-fonts",
+  "noto-fonts",
+  "noto-fonts-cjk",
+  "noto-fonts-emoji",
+  "noto-fonts-extra"
+]
+
+docker = [
+  "docker",
+  "docker-buildx",
+  "docker-compose",
+  { type = "hook", path = "docker.sh" },
+  "lazydocker"
+]
+
+menu = [
+  "elephant",
+  "elephant-calc",
+  "elephant-clipboard",
+  "elephant-desktopapplications",
+  "elephant-menus",
+  "elephant-providerlist",
+  { type = "symlink", source = "elephant/elephant.toml", target = "~/.config/elephant/elephant.toml" },
+  { type = "symlink", source = "elephant/menus", target = "~/.config/elephant/menus" },
+  { type = "symlink", source = "elephant/providerlist.toml", target = "~/.config/elephant/providerlist.toml" },
+  "walker",
+  { type = "symlink", source = "walker/config.toml", target = "~/.config/walker/config.toml" },
+  { type = "symlink", source = "walker/themes", target = "~/.config/walker/themes" }
+]
+
+apps = [
+  "discord",
+  "emote",
+  "eog",
+  "evince",
+  "firefox-developer-edition",
+  "localsend",
+  "mattermost-desktop",
+  "nemo",
+  "python-eduvpn-client",
+  "slack-desktop",
+  "spotify",
+  "tailscale",
+  "trayscale",
+  "teams-for-linux",
+  "telegram-desktop",
+  "visual-studio-code-bin",
+  { type = "symlink", source = "code/code-flags.conf", target = "~/.config/code-flags.conf" },
+  { type = "symlink", source = "code/settings.json", target = "~/.config/Code/User/settings.json" },
+  { type = "symlink", source = "code/keybindings.json", target = "~/.config/Code/User/keybindings.json" },
+  "zotero-bin"
+]
+
+terminal = [
+  "alacritty",
+  "bat",
+  "btop",
+  "caligula",
+  "csvlens",
+  "curl",
+  "direnv",
+  { type = "hook", path = "direnv.sh" },
+  "eza",
+  "ffmpeg",
+  "fzf",
+  { type = "symlink", source = "git/.gitconfig", target = "~/.gitconfig" },
+  { type = "symlink", source = "git/personal.config", target = "~/.config/git/personal.config" },
+  "gdb",
+  "gdu",
+  "pipes.sh",
+  { type = "symlink", source = "mise/config.toml", target = "~/.config/mise/config.toml" },
+  { type = "hook", source = "mise.sh"},
+  "reflector",
+  { type = "hook", path = "reflector.sh" },
+  "rsync",
+  "speedtest-cli",
+  "git-delta",
+  "glow",
+  "neofetch",
+  { type = "symlink", source = "neofetch/config.conf", target = "~/.config/neofetch/config.conf" },
+  "unzip",
+  "tree",
+  "tty-clock",
+  "upower",
+  "wget",
+  "valgrind",
+  "vim",
+  "neovim",
+  "zsh",
+  { type = "symlink", source = "zsh/.zshrc", target = "~/.zshrc" },
+  { type = "hook", path = "zsh.sh" },
+  { type = "symlink", source = "zsh/.zprofile", target = "~/.zprofile" },
+  { type = "symlink", source = "zsh/.zsh_aliases", target = "~/.zsh_aliases" },
+  { type = "symlink", source = "zsh/.zsh_functions", target = "~/.zsh_functions" },
+  { type = "symlink", source = "zsh/themes/candy.zsh-theme", target = "~/.oh-my-zsh/themes/candy.zsh-theme" }
+]
+
+misc = [
+  "dunst",
+  { type = "symlink", source = "dunst/dunstrc", target = "~/.config/dunst/dunstrc" },
+  "inotify-tools",
+  "man-db",
+  "man-pages",
+  "satty",
+  { type = "symlink", source = "ssh/config", target = "~/.ssh/config" },
+]
+
+[omen]
+
+[thinkpad]
