@@ -1,1 +1,0 @@
-/home/rui/dotfiles/files/zsh/.zshrc
