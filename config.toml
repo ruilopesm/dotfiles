@@ -141,7 +141,7 @@ terminal = [
   "gdu",
   "pipes.sh",
   { type = "symlink", source = "mise/config.toml", target = "~/.config/mise/config.toml" },
-  { type = "hook", source = "mise.sh"},
+  { type = "hook", path = "mise.sh"},
   "reflector",
   { type = "hook", path = "reflector.sh" },
   "rsync",
