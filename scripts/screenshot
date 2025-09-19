@@ -1,0 +1,3 @@
+#!/bin/sh
+
+hyprshot -m region --raw --freeze | satty --filename - --early-exit --actions-on-enter save-to-clipboard --copy-command 'wl-copy'
