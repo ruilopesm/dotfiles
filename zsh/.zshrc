@@ -45,6 +45,9 @@ eval "$(/home/rui/.local/bin/mise activate zsh)"
 # elixir
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 4096000"
 
+# uv
+echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
+
 # texlive
 export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
 export MANPATH="/usr/local/texlive/2025/texmf-dist/doc/man:${MANPATH:-}"
