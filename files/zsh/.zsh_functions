@@ -146,28 +146,74 @@ function to() {
   scp "$dir/$choice" "$host:."
 }
 
-function from() {
-  local host dir choice
-  if [ -z "$1" ]; then
-    echo "Usage: from user@host"
+from() {
+  local host="" dir choice start_in_root=0 folder=""
+
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --root) start_in_root=1; shift ;;
+      --folder) folder="$2"; shift 2 ;;
+      -h | --help)
+        echo "Usage: from [--root] [--folder PATH] user@host"
+        echo "  --root          Start browsing from / instead of ~"
+        echo "  --folder PATH   Download PATH directly (skip fzf)"
+        return 0
+        ;;
+
+      *) host="$1"; shift ;;
+    esac
+  done
+
+  if [[ -z "$host" ]]; then
+    echo "Usage: from [--root] [--folder PATH] user@host"
     return 1
   fi
 
-  host=$1
-  dir="."
+  _q() { printf "%q" "$1"; }
+  _q_or_raw_tilde() {
+    if [[ "$1" == ~* ]]; then printf "%s" "$1"; else _q "$1"; fi
+  }
+
+  _remote_is_dir() {
+    local p="$1"
+    ssh "$host" "d=$(_q_or_raw_tilde "$p"); [ -d \"\$d\" ]"
+  }
+
+  _remote_list() {
+    local p="$1"
+    ssh "$host" "d=$(_q_or_raw_tilde "$p"); find \"\$d\" -maxdepth 1 ! -path \"\$d\" -printf '%P\n'"
+  }
+
+  if [[ -n "$folder" ]]; then
+    if _remote_is_dir "$folder"; then
+      scp -r "$host:$(_q_or_raw_tilde "$folder")" .
+    else
+      scp    "$host:$(_q_or_raw_tilde "$folder")" .
+    fi
+    return $?
+  fi
+
+  if [[ $start_in_root -eq 1 ]]; then
+    dir="/"
+  else
+    dir="~"
+  fi
 
   while true; do
-    choice=$(ssh "$host" \
-      "find '$dir' -maxdepth 1 ! -path '$dir' -printf '%P\n'" \
-      | fzf --prompt="Remote [$host:$dir] ▶ " \
+    choice=$(
+      _remote_list "$dir" | fzf --prompt="Remote [$host:$dir] ▶ "
     ) || return 1
 
-    if ssh "$host" "[ -d '$dir/$choice' ]"; then
+    if _remote_is_dir "$dir/$choice"; then
       dir="$dir/$choice"
     else
       break
     fi
   done
 
-  scp "$host:$dir/$choice" .
+  if _remote_is_dir "$dir/$choice"; then
+    scp -r "$host:$(_q_or_raw_tilde "$dir/$choice")" .
+  else
+    scp    "$host:$(_q_or_raw_tilde "$dir/$choice")" .
+  fi
 }
