@@ -6,7 +6,7 @@ ZSH_THEME="candy"
 zstyle ':omz:update' mode auto
 zstyle ':completion:' use-cache on
 
-plugins=(git asdf zsh-autosuggestions colored-man-pages command-not-found fzf-tab z autoswitch_virtualenv zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions colored-man-pages command-not-found fzf-tab z autoswitch_virtualenv zsh-syntax-highlighting)
 
 export HISTFILESIZE=100000000000
 export SAVEHIST=5000000
@@ -31,7 +31,7 @@ CORRECT_IGNORE_FILE=logs
 export PATH=~/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/share:$PATH
-export PATH=$DOTFILES_DIRECTORY/scripts:$PATH
+export PATH=$DOTFILES_DIRECTORY/files/scripts:$PATH
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -46,7 +46,7 @@ eval "$(/home/rui/.local/bin/mise activate zsh)"
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 4096000"
 
 # uv
-echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
+eval "$(uv generate-shell-completion zsh)"
 
 # texlive
 export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
