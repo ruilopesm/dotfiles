@@ -170,12 +170,18 @@ terminal = [
   { type = "symlink", source = "zsh/themes/candy.zsh-theme", target = "~/.oh-my-zsh/themes/custom.zsh-theme" }
 ]
 
+hardware = [
+  "usbutils"
+]
+
 misc = [
   "dunst",
   { type = "symlink", source = "dunst/dunstrc", target = "~/.config/dunst/dunstrc" },
+  "gnome-keyring",
   "inotify-tools",
   "man-db",
   "man-pages",
+  "polkit-gnome",
   "satty",
   { type = "symlink", source = "ssh/config", target = "~/.ssh/config" },
 ]
@@ -192,5 +198,8 @@ audio = [
 ]
 
 hardware = [
-  "intel-ucode"
+  "intel-ucode",
+  "fprintd",
+  "imagemagick",
+  { type = "hook", path = "fingerprint.sh" }
 ]
