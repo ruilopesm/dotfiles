@@ -28,6 +28,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
     "workbench.layoutControl.enabled": false,
     "workbench.editor.labelFormat": "short",
     "workbench.iconTheme": "material-icon-theme",
