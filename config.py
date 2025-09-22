@@ -1,3 +1,4 @@
+import os
 import subprocess
 from dataclasses import dataclass
 from enum import Enum
@@ -220,7 +221,8 @@ def _install_package(package: Package, console: Console) -> Optional[Installatio
     console.print(f"Installing {package}...")
 
     try:
-        subprocess.run(["yay", "-S", "--noconfirm", package.name], check=True)
+        env = _prepare_env_for_yay()
+        subprocess.run(["yay", "-S", "--noconfirm", package.name], env = env, check = True)
         console.print(f"[green]✓[/green] {package.name} installed successfully")
         return None
 
@@ -233,6 +235,22 @@ def _install_package(package: Package, console: Console) -> Optional[Installatio
         error_message = "yay not found. Please install yay first"
         console.print(f"[red]✗[/red] {error_message}")
         return InstallationError(ItemType.PACKAGE, package.name, error_message)
+
+def _prepare_env_for_yay() -> Any:
+    env = os.environ.copy()
+    current_venv = os.path.join(env.get("VIRTUAL_ENV", ""), "bin")
+
+    parts = env.get("PATH", "").split(":")
+    new = []
+
+    for p in parts:
+        if p == current_venv:
+            continue
+
+        new.append(p)
+
+    env["PATH"] = ":".join(new)
+    return env
 
 def _execute_hook(hook: Hook, console: Console) -> Optional[InstallationError]:
     console.print(f"Executing {hook}...")
