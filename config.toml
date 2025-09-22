@@ -28,6 +28,7 @@ hyprland = [
 
 interface = [
   "brightnessctl",
+  "gnome-theme-extras",
   "gtk",
   "gtk2",
   "gtk3",
@@ -108,6 +109,7 @@ apps = [
   "firefox-developer-edition",
   "localsend",
   "mattermost-desktop",
+  { type = "symlink", source = "mattermost/config.json", target = "~/.config/Mattermost/config.json" },
   "nemo",
   "python-eduvpn-client",
   "slack-desktop",
@@ -160,11 +162,11 @@ terminal = [
   "vim",
   "neovim",
   "zsh",
+  { type = "symlink", source = "zsh/.zsh_aliases", target = "~/.zsh_aliases" },
+  { type = "symlink", source = "zsh/.zsh_functions", target = "~/.zsh_functions" },
   { type = "symlink", source = "zsh/.zshrc", target = "~/.zshrc" },
   { type = "hook", path = "zsh.sh" },
   { type = "symlink", source = "zsh/.zprofile", target = "~/.zprofile" },
-  { type = "symlink", source = "zsh/.zsh_aliases", target = "~/.zsh_aliases" },
-  { type = "symlink", source = "zsh/.zsh_functions", target = "~/.zsh_functions" },
   { type = "symlink", source = "zsh/themes/candy.zsh-theme", target = "~/.oh-my-zsh/themes/custom.zsh-theme" }
 ]
 
@@ -178,13 +180,17 @@ misc = [
   { type = "symlink", source = "ssh/config", target = "~/.ssh/config" },
 ]
 
+post = [
+  { type = "hook", path = "cleanup.sh" }
+]
+
 [omen]
 
 [thinkpad]
-common = [
-  "intel-ucode"
-]
-
 audio = [
   "sof-firmware"
+]
+
+hardware = [
+  "intel-ucode"
 ]
