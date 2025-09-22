@@ -27,6 +27,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
    cd dotfiles
    ```
 
+> [!NOTE]
+> From now on, if `uv` happens to not work, call it from `~/.local/bin/uv`.
+
 2. **Install dependencies with uv:**
    ```bash
    uv sync
