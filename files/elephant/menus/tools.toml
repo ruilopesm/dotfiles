@@ -7,7 +7,7 @@ fixed_order = true
 [[entries]]
 text = "Screenshot"
 icon = "camera-photo"
-action = "$DOTFILES_DIRECTORY/scripts/screenshot"
+action = "$DOTFILES_DIRECTORY/files/scripts/screenshot"
 
 [[entries]]
 text = "Color Picker"
