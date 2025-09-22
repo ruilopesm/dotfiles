@@ -145,6 +145,7 @@ terminal = [
   { type = "symlink", source = "mise/config.toml", target = "~/.config/mise/config.toml" },
   { type = "hook", path = "mise.sh"},
   "reflector",
+  "ripgrep",
   { type = "hook", path = "reflector.sh" },
   "rsync",
   "speedtest-cli",
