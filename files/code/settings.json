@@ -219,4 +219,5 @@
     "github.copilot.nextEditSuggestions.fixes": false,
     "chat.agent.enabled": true,
     "python.analysis.typeCheckingMode": "standard",
+    "makefile.configureOnOpen": true,
 }
