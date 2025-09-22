@@ -275,11 +275,11 @@ def _execute_hook(hook: Hook, console: Console) -> Optional[InstallationError]:
 def _create_symlink(symlink: Symlink, console: Console) -> Optional[InstallationError]:
     console.print(f"Creating symlink {symlink}...")
     
+    files_directory = Path.cwd() / "files"
+    source_path = (files_directory / symlink.source).resolve()
+    target_path = Path(symlink.target).expanduser()
+
     try:
-        files_directory = Path.cwd() / "files"
-        source_path = (files_directory / symlink.source).resolve()
-        target_path = Path(symlink.target).expanduser()
-        
         if not source_path.exists():
             error_message = f"Source file not found: {source_path}"
             console.print(f"[red]✗[/red] {error_message}")
