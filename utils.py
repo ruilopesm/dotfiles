@@ -1,13 +1,14 @@
 import signal
 import sys
-from typing import Final, List
+from typing import Final, List, Optional
+from types import FrameType
 
 from rich.console import Console
 from rich.panel import Panel
 
 console: Final[Console] = Console()
 
-def _signal_handler(_signum: int, _frame: None) -> None:
+def _signal_handler(_signum: int, _frame: Optional[FrameType]) -> None:
     console.print()
     console.print(Panel.fit(
         "[red]✗[/red] Installation interrupted by user",

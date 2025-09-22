@@ -26,7 +26,19 @@ from rich.prompt import Confirm
 
 console: Final[Console] = Console()
 
+def _ensure_prerequisites() -> None:
+    try:
+        subprocess.run(["yay", "--version"], check = True, stdout = subprocess.DEVNULL, stderr = subprocess.DEVNULL)
+    except FileNotFoundError:
+        console.print(Panel.fit(
+            "[red]✗[/red] 'yay' is not installed. Please install it first and re-run the script",
+            border_style = "red"
+        ))
+        exit(1)
+
 def main() -> None:
+    _ensure_prerequisites()
+
     start_time = time.time()
     setup_signal_handlers()
 
