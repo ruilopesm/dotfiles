@@ -47,7 +47,7 @@ interface = [
 
 network = [
   "networkmanager",
-  "networkmanager-applet",
+  "network-manager-applet",
   "networkmanager-openvpn"
 ]
 
@@ -125,13 +125,14 @@ apps = [
 
 terminal = [
   "alacritty",
+  { type = "symlink", source = "alacritty/alacritty.toml", target = "~/.config/alacritty/alacritty.toml" },
+  { type = "symlink", source = "alacritty/themes", target = "~/.config/alacritty/themes" },
   "bat",
   "btop",
   "caligula",
   "csvlens",
   "curl",
   "direnv",
-  { type = "hook", path = "direnv.sh" },
   "eza",
   "ffmpeg",
   "fzf",
@@ -164,7 +165,7 @@ terminal = [
   { type = "symlink", source = "zsh/.zprofile", target = "~/.zprofile" },
   { type = "symlink", source = "zsh/.zsh_aliases", target = "~/.zsh_aliases" },
   { type = "symlink", source = "zsh/.zsh_functions", target = "~/.zsh_functions" },
-  { type = "symlink", source = "zsh/themes/candy.zsh-theme", target = "~/.oh-my-zsh/themes/candy.zsh-theme" }
+  { type = "symlink", source = "zsh/themes/candy.zsh-theme", target = "~/.oh-my-zsh/themes/custom.zsh-theme" }
 ]
 
 misc = [
@@ -180,3 +181,10 @@ misc = [
 [omen]
 
 [thinkpad]
+common = [
+  "intel-ucode"
+]
+
+audio = [
+  "sof-firmware"
+]
