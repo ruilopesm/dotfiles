@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "teams": [],
+  "showTrayIcon": true,
+  "trayIconTheme": "use_system",
+  "minimizeToTray": true,
+  "notifications": {
+    "flashWindow": 0,
+    "bounceIcon": true,
+    "bounceIconType": "informational"
+  },
+  "showUnreadBadge": true,
+  "useSpellChecker": true,
+  "enableHardwareAcceleration": true,
+  "autostart": true,
+  "hideOnStart": true,
+  "spellCheckerLocales": [],
+  "darkMode": false,
+  "lastActiveTeam": 0,
+  "downloadLocation": "/home/rui/Downloads",
+  "startInFullscreen": false,
+  "logLevel": "info",
+  "enableMetrics": true,
+  "alwaysClose": true,
+  "autoCheckForUpdates": true,
+  "alwaysMinimize": true
+}
