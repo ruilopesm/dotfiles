@@ -208,8 +208,11 @@ audio = [
 ]
 
 hardware = [
+  "intel-media-driver",
+  "intel-hybrid-codec-driver-git",
   "intel-ucode",
   "fprintd",
+  "tlp",
   "imagemagick",
   { type = "hook", path = "fingerprint.sh" }
 ]
