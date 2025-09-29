@@ -44,7 +44,7 @@
       "format-bluetooth": "XM4 {volume}%",
       "format-bluetooth-muted": "XM4 {volume}%",
       "tooltip": true,
-      "on-click": "pwvucontrol",
+      "on-click": "pavucontrol",
       "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
       "scroll-step": "5.0"
     },
