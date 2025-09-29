@@ -13,3 +13,8 @@ action = "hyprmon --profile home"
 text = "Laptop"
 icon = "computer-laptop"
 action = "hyprmon --profile laptop"
+
+[[entries]]
+text = "Lab"
+icon = "applications-science-symbolic"
+action = "hyprmon --profile lab"
