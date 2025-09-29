@@ -1,3 +1,8 @@
 #!/bin/sh
 
-hyprshot -m region --raw --freeze | satty --filename - --early-exit --actions-on-enter save-to-clipboard --copy-command 'wl-copy'
+pkill slurp || hyprshot -m region --raw |
+  satty --filename - \
+    --early-exit \
+    --actions-on-enter save-to-clipboard \
+    --save-after-copy \
+    --copy-command 'wl-copy'
