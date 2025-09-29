@@ -212,7 +212,8 @@
         "*": true,
         "plaintext": false,
         "markdown": true,
-        "scminput": false
+        "scminput": false,
+        "c": true
     },
     "github.copilot.editor.enableAutoCompletions": false,
     "github.copilot.nextEditSuggestions.enabled": false,
