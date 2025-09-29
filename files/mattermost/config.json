@@ -1,6 +1,28 @@
 {
   "version": 3,
-  "teams": [],
+  "teams": [
+    {
+      "name": "INESC TEC",
+      "url": "https://chat.inesctec.pt/",
+      "order": 0,
+      "lastActiveTab": 0,
+      "tabs": [
+        {
+          "name": "TAB_MESSAGING",
+          "order": 0,
+          "isOpen": true
+        },
+        {
+          "name": "TAB_FOCALBOARD",
+          "order": 1
+        },
+        {
+          "name": "TAB_PLAYBOOKS",
+          "order": 2
+        }
+      ]
+    }
+  ],
   "showTrayIcon": true,
   "trayIconTheme": "use_system",
   "minimizeToTray": true,
