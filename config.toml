@@ -65,7 +65,7 @@ audio = [
   "pipewire-jack",
   "pipewire-pulse",
   "playerctl",
-  "pwvucontrol",
+  "pavucontrol",
   "wireplumber",
 ]
 
