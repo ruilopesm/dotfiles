@@ -109,7 +109,9 @@ apps = [
   "localsend",
   "mattermost-desktop",
   { type = "symlink", source = "mattermost/config.json", target = "~/.config/Mattermost/config.json" },
+  "mpv",
   "nemo",
+  "obsidian",
   "python-eduvpn-client",
   "slack-desktop",
   "spotify",
@@ -129,6 +131,7 @@ terminal = [
   { type = "symlink", source = "alacritty/alacritty.toml", target = "~/.config/alacritty/alacritty.toml" },
   { type = "symlink", source = "alacritty/themes", target = "~/.config/alacritty/themes" },
   "bat",
+  "bind-tools",
   "btop",
   "caligula",
   "csvlens",
@@ -141,6 +144,8 @@ terminal = [
   { type = "symlink", source = "git/personal.config", target = "~/.config/git/personal.config" },
   "gdb",
   "gdu",
+  "github-cli",
+  "jq",
   "pipes.sh",
   { type = "symlink", source = "mise/config.toml", target = "~/.config/mise/config.toml" },
   { type = "hook", path = "mise.sh"},
@@ -168,6 +173,11 @@ terminal = [
   { type = "hook", path = "zsh.sh" },
   { type = "symlink", source = "zsh/.zprofile", target = "~/.zprofile" },
   { type = "symlink", source = "zsh/themes/candy.zsh-theme", target = "~/.oh-my-zsh/themes/custom.zsh-theme" }
+]
+
+writing = [
+  "texlive-installer",
+  "typst"
 ]
 
 hardware = [
