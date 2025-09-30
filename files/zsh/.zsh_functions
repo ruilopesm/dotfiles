@@ -1,10 +1,5 @@
 ## Misc ##
 
-# Downloads a file from blackboard using wget (argument: link to the file)
-function bb_down() {
-    wget --user=PG56009 --ask-password $1
-}
-
 # Shows weather of specified location (argument: location)
 function weather() {
     curl wttr.in/$1
@@ -19,11 +14,6 @@ function topcmd() {
 function mkcd() {
     mkdir -p $1
     cd $1
-}
-
-# Changes wallpaper using feh (argument: wallpaper filename)
-function cw() {
-    feh --bg-scale ~/Pictures/wallpapers/$1
 }
 
 # Opens given file using xdg-open (argument: filename)
@@ -43,15 +33,10 @@ function pr() {
     gh pr checkout $1
 }
 
-# Copies the given file contents to the clipboard (argument: filename)
-function copy() {
-    xclip -sel clip $1
-}
-
 # Commits with a specific backup message (used in obsidian vault)
 function gcdatetime() {
     local timestamp=$(TZ='Europe/Lisbon' date '+%d-%m-%Y %H:%M:%S')
-    git commit -m "backup: $timestamp @ $(hostname)"
+    git commit -m "backup: $timestamp @ $(uname -n)"
 }
 
 # Rescues a given file from the Downloads folder (procedure only)
