@@ -36,6 +36,20 @@ def _ensure_prerequisites() -> None:
         ))
         exit(1)
 
+def _cleanup_created_folders() -> None:
+    current_user = subprocess.run(["whoami"], capture_output = True, text = True).stdout.strip()
+
+    folders = [
+        f"/home/{current_user}/yay",
+        f"/home/{current_user}/go",
+    ]
+
+    for folder in folders:
+        try:
+            subprocess.run(["rm", "-rf", folder], check = True)
+        except subprocess.CalledProcessError:
+            console.print(f"[red]✗[/red] Failed to remove {folder}, please delete it manually")
+
 def main() -> None:
     _ensure_prerequisites()
 
@@ -82,6 +96,13 @@ def main() -> None:
             f"[green]✓[/green] Installation completed successfully!\n[dim]Took {time_str}[/dim]",
             border_style = "green"
         ))
+
+    _cleanup_created_folders()
+
+    console.print(Panel.fit(
+        "[bold green]✓[/bold green] Post cleanup completed successfully!",
+        border_style = "green"
+    ))
     
     should_reboot = Confirm.ask(
         "[yellow]Some changes may require a reboot to take effect. Would you like to reboot now?[/yellow]",
