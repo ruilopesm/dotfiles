@@ -40,6 +40,9 @@ Before installing the `dotfiles`, make sure you have the following:
 
 ![2025-09-22](.github/assets/2025-09-22.png)
 
+> [!NOTE]
+> Some configurations inside [files](files) folder are from previous installations, namely Arch with X11 and bspwm. However, I am now using Arch with Wayland and hyprland.
+
 ### License
 
 This repository is licensed under the [WTFNMFPL](LICENSE) license.
