@@ -63,21 +63,6 @@ function lupa() {
        --preview-window '~4,+{2}+4/3,<80(up)'
 }
 
-# Function with several actions for working with clipcat
-function clipboard() {
-    local action=$1
-    if [[ $action == "pick" ]]; then
-        clipcat-menu --finder=builtin insert
-    elif [[ $action == "delete" ]]; then
-        clipcat-menu --finder=builtin remove
-    elif [[ $action == "clear" ]]; then
-        clipcatctl clear
-    else
-        echo "Usage: clipboard pick|delete|clear" >&2
-        return 1
-    fi
-}
-
 ## Lab ##
 
 function lab() {
