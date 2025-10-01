@@ -181,7 +181,16 @@ writing = [
 ]
 
 hardware = [
-  "usbutils"
+  "usbutils",
+  "dmidecode"
+]
+
+printing = [
+  "cups",
+  { type = "hook", path = "cups.sh" },
+  "hplip",
+  "sane",
+  "simple-scan"
 ]
 
 misc = [
@@ -194,10 +203,6 @@ misc = [
   "polkit-gnome",
   "satty",
   { type = "symlink", source = "ssh/config", target = "~/.ssh/config" },
-]
-
-post = [
-  { type = "hook", path = "cleanup.sh" }
 ]
 
 [omen]
