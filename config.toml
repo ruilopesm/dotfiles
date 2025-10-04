@@ -74,7 +74,8 @@ fonts = [
   "noto-fonts",
   "noto-fonts-cjk",
   "noto-fonts-emoji",
-  "noto-fonts-extra"
+  "noto-fonts-extra",
+  { type = "hook", path = "emoji.sh" }
 ]
 
 docker = [
