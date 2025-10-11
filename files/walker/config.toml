@@ -4,9 +4,10 @@ theme = "custom"
 disable_mouse = false
 
 [keybinds]
-close = "Escape"
-next = "Down"
-resume_last_query = "ctrl r"
+close = ["Escape"]
+next = ["Down"]
+previous = ["Up"]
+resume_last_query = ["ctrl r"]
 quick_activate = ["F1", "F2", "F3", "F4"]
 
 [providers]
@@ -20,19 +21,9 @@ empty = ["desktopapplications"]
 prefix = ";"
 provider = "providerlist"
 
-[providers.providerlist]
-default = "activate"
-activate = "Return"
-
 [[providers.prefixes]]
 prefix = "="
 provider = "calc"
-
-[providers.calc]
-default = "copy"
-copy = "Return"
-save = "ctrl s"
-delete = "ctrl d"
 
 [[providers.prefixes]]
 prefix = ":"
@@ -40,6 +31,19 @@ provider = "clipboard"
 
 [providers.clipboard]
 time_format = "%d/%m - %H:%M"
-default = "copy"
-copy = "Return"
-delete = "ctrl d"
+
+[providers.actions]
+providerlist = [
+  { action = "activate", default = true, bind = "Return", after = "ClearReload" }
+]
+
+calc = [
+  { action = "copy", default = true, bind = "Return" },
+  { action = "save", bind = "ctrl s", after = "AsyncClearReload" },
+  { action = "delete", bind = "ctrl d", after = "AsyncReload" }
+]
+
+clipboard = [
+  { action = "copy", default = true, bind = "Return" },
+  { action = "remove", bind = "ctrl d", after = "ClearReload" }
+]
