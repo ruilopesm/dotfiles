@@ -167,6 +167,7 @@ terminal = [
   "valgrind",
   "vim",
   "neovim",
+  "zip",
   "zsh",
   { type = "symlink", source = "zsh/.zsh_aliases", target = "~/.zsh_aliases" },
   { type = "symlink", source = "zsh/.zsh_functions", target = "~/.zsh_functions" },
@@ -177,6 +178,8 @@ terminal = [
 ]
 
 writing = [
+  "libreoffice-still",
+  "libreoffice-still-pt",
   "texlive-installer",
   "typst"
 ]
