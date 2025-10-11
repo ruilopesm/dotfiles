@@ -85,10 +85,11 @@
         "**/.ruff_cache/": true,
         "**/target/": true,
         "**/*.sage.py": true,
-        "**/*.d": true
+        "**/*.d": true,
+        "**/obj/": true
     },
     "files.associations": {
-        "*.log.processed": "log"
+        "*.log.*": "log"
     },
 
     // terminal
@@ -143,6 +144,7 @@
     "[makefile]": {
         "editor.inlayHints.enabled": "off"
     },
+    "makefile.configureOnOpen": true,
     "cmake.configureSettings": {
         "CMAKE_TOOLCHAIN_FILE": "/home/rui/Clones/vcpkg/scripts/buildsystems/vcpkg.cmake"
     },
@@ -208,6 +210,7 @@
 
     // copilot
     "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+    "chat.tools.terminal.enableAutoApprove": false,
     "github.copilot.enable": {
         "*": true,
         "plaintext": false,
@@ -218,7 +221,5 @@
     "github.copilot.editor.enableAutoCompletions": false,
     "github.copilot.nextEditSuggestions.enabled": false,
     "github.copilot.nextEditSuggestions.fixes": false,
-    "chat.agent.enabled": true,
-    "python.analysis.typeCheckingMode": "standard",
-    "makefile.configureOnOpen": true,
+    "chat.agent.enabled": true
 }
