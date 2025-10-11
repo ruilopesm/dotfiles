@@ -7,14 +7,14 @@ fixed_order = true
 [[entries]]
 text = "Home"
 icon = "akonadi-phone-home"
-action = "hyprmon --profile home"
+actions = { "select" = "hyprmon --profile home" }
 
 [[entries]]
 text = "Laptop"
 icon = "computer-laptop"
-action = "hyprmon --profile laptop"
+actions = { "select" = "hyprmon --profile laptop" }
 
 [[entries]]
 text = "Lab"
 icon = "applications-science-symbolic"
-action = "hyprmon --profile lab"
+actions = { "select" = "hyprmon --profile lab" }

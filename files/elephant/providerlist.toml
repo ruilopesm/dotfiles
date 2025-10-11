@@ -1,1 +1,2 @@
+hide_from_providerlist = true
 hidden = ["desktopapplications", "calc", "clipboard"]

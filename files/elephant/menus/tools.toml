@@ -7,9 +7,9 @@ fixed_order = true
 [[entries]]
 text = "Screenshot"
 icon = "camera-photo"
-action = "$DOTFILES_DIRECTORY/files/scripts/screenshot"
+actions = { "select" = "$DOTFILES_DIRECTORY/files/scripts/screenshot" }
 
 [[entries]]
 text = "Color Picker"
 icon = "gtk-color-picker"
-action = "hyprpicker -aq"
+actions = { "select" = "hyprpicker -aq" }

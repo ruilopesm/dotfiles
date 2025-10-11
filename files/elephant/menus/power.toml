@@ -7,19 +7,19 @@ fixed_order = true
 [[entries]]
 text = "Shutdown"
 icon = "system-shutdown"
-action = "systemctl poweroff"
+actions = { "select" = "systemctl poweroff" }
 
 [[entries]]
 text = "Reboot"
 icon = "system-reboot"
-action = "systemctl reboot"
+actions = { "select" = "systemctl reboot" }
 
 [[entries]]
 text = "Lock"
 icon = "system-lock-screen"
-action = "hyprlock"
+actions = { "select" = "hyprlock" }
 
 [[entries]]
 text = "Logout"
 icon = "system-log-out"
-action = "hyprctl dispatch exit"
+action = { "select" = "hyprctl dispatch exit" }
