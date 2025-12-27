@@ -1,0 +1,35 @@
+#!/bin/sh
+
+BATTERY_PATH=$(find /sys/class/power_supply/ -maxdepth 1 -name "BAT*" | head -n 1)
+
+if [[ -z "$BATTERY_PATH" ]]; then
+    echo "No battery found."
+    exit 1
+fi
+
+START_FILE="$BATTERY_PATH/charge_start_threshold"
+STOP_FILE="$BATTERY_PATH/charge_stop_threshold"
+
+CURRENT_START=$(cat "$START_FILE")
+CURRENT_STOP=$(cat "$STOP_FILE")
+
+echo "Current charge thresholds:"
+echo "Start: $CURRENT_START%"
+echo "Stop: $CURRENT_STOP%"
+
+if [[ "$CURRENT_START" -eq 0 && "$CURRENT_STOP" -eq 100 ]]; then
+    echo "Switching to optimized thresholds"
+    NEW_START=50
+    NEW_STOP=90
+else
+    echo "Switching to default thresholds"
+    NEW_START=0
+    NEW_STOP=100
+fi
+
+sudo bash -c "echo $NEW_START > $START_FILE"
+sudo bash -c "echo $NEW_STOP > $STOP_FILE"
+
+echo "New charge thresholds set:"
+echo "Start: $NEW_START%"
+echo "Stop: $NEW_STOP%"
