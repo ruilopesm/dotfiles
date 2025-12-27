@@ -79,17 +79,23 @@
         "**/_build": true,
         "**/.turbo": true,
         "**/.astro": true,
-        "**/CMakeFiles/": true,
-        "**/vcpkg_installed/": true,
         "**/.vagrant/": true,
         "**/.ruff_cache/": true,
-        "**/target/": true,
         "**/*.sage.py": true,
-        "**/*.d": true,
-        "**/obj/": true
+        "**/.vcpkg/": true
     },
     "files.associations": {
-        "*.log.*": "log"
+        "*.log.*": "log",
+        "format": "shellscript"
+    },
+
+    // Ctrl+P palette search exclusions
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/rocksdb/**": true,
+        "**/vcpkg_installed/**": true
     },
 
     // terminal
@@ -137,7 +143,7 @@
     },
 
     // c and c++
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2 }",
+    "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
     "C_Cpp.doxygen.generatedStyle": "/**",
     "C_Cpp.default.enableConfigurationSquiggles": false,
     "C_Cpp.dimInactiveRegions": false,
@@ -187,6 +193,12 @@
     "java.jdt.ls.java.home": "/usr/lib/jvm/java-21-openjdk",
     "maven.terminal.useJavaHome": true,
 
+    // typst
+    "tinymist.fontPaths": [
+        "${workspaceFolder}/fonts",
+        "${workspaceFolder}/template/fonts"
+    ],
+
     // misc
     "[typst]": {
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
@@ -212,14 +224,17 @@
     "github.copilot.chat.codeGeneration.useInstructionFiles": true,
     "chat.tools.terminal.enableAutoApprove": false,
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
         "markdown": true,
         "scminput": false,
-        "c": true
+        "c": true,
+        "log": false,
+        "rust": false
     },
     "github.copilot.editor.enableAutoCompletions": false,
     "github.copilot.nextEditSuggestions.enabled": false,
     "github.copilot.nextEditSuggestions.fixes": false,
-    "chat.agent.enabled": true
+    "chat.agent.enabled": true,
+    "mesonbuild.downloadLanguageServer": true,
 }
