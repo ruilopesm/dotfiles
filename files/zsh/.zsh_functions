@@ -16,7 +16,7 @@ function mkcd() {
 
 # Opens given file using xdg-open (argument: filename)
 function open() {
-    xdg-open $@ &
+    xdg-open $@ > /dev/null 2> /dev/null &
     disown
 }
 
