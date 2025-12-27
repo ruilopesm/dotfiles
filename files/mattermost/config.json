@@ -1,26 +1,10 @@
 {
-  "version": 3,
-  "teams": [
+  "version": 4,
+  "servers": [
     {
       "name": "INESC TEC",
       "url": "https://chat.inesctec.pt/",
-      "order": 0,
-      "lastActiveTab": 0,
-      "tabs": [
-        {
-          "name": "TAB_MESSAGING",
-          "order": 0,
-          "isOpen": true
-        },
-        {
-          "name": "TAB_FOCALBOARD",
-          "order": 1
-        },
-        {
-          "name": "TAB_PLAYBOOKS",
-          "order": 2
-        }
-      ]
+      "order": 0
     }
   ],
   "showTrayIcon": true,
@@ -38,11 +22,13 @@
   "hideOnStart": true,
   "spellCheckerLocales": [],
   "darkMode": false,
-  "lastActiveTeam": 0,
+  "lastActiveServer": 0,
   "downloadLocation": "/home/rui/Downloads",
   "startInFullscreen": false,
   "logLevel": "info",
   "enableMetrics": true,
+  "viewLimit": 15,
+  "themeSyncing": true,
   "alwaysClose": true,
   "autoCheckForUpdates": true,
   "alwaysMinimize": true
