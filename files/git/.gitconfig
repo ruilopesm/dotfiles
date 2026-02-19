@@ -29,7 +29,7 @@
   rebase = true
 
 [tag]
-  gpgsign = true
+	gpgSign = true
 
 [log]
   date = auto:human
