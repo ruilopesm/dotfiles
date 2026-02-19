@@ -93,7 +93,6 @@ menu = [
   "elephant-desktopapplications",
   "elephant-menus",
   "elephant-providerlist",
-  { type = "symlink", source = "elephant/elephant.toml", target = "~/.config/elephant/elephant.toml" },
   { type = "symlink", source = "elephant/menus", target = "~/.config/elephant/menus" },
   { type = "symlink", source = "elephant/providerlist.toml", target = "~/.config/elephant/providerlist.toml" },
   "walker",
@@ -107,11 +106,15 @@ apps = [
   "eog",
   "evince",
   "firefox-developer-edition",
+  "jellyfin-desktop",
   "localsend",
   "mattermost-desktop",
   { type = "symlink", source = "mattermost/config.json", target = "~/.config/Mattermost/config.json" },
   "mpv",
   "nemo",
+  "nemo-fileroller",
+  "nemo-share",
+  { type = "hook", path = "nemo.sh" },
   "obsidian",
   "python-eduvpn-client",
   "slack-desktop",
@@ -153,7 +156,6 @@ terminal = [
   "reflector",
   "ripgrep",
   { type = "hook", path = "reflector.sh" },
-  "rsync",
   "speedtest-cli",
   "git-delta",
   "glow",
@@ -175,6 +177,12 @@ terminal = [
   { type = "hook", path = "zsh.sh" },
   { type = "symlink", source = "zsh/.zprofile", target = "~/.zprofile" },
   { type = "symlink", source = "zsh/themes/candy.zsh-theme", target = "~/.oh-my-zsh/themes/custom.zsh-theme" }
+]
+
+backups = [
+  "rsync",
+  "syncthing",
+  { type = "hook", path = "syncthing.sh" }
 ]
 
 writing = [
