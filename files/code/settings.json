@@ -1,240 +1,286 @@
 {
-    // editor, workspace, workbench, window and explorer
-    "editor.fontFamily": "Fira Code, monospaced",
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.tokenColorCustomizations": {
-        "[Material Night Eighties]": {
-            "comments": "#76bb87"
-        },
-        "[One Dark Pro Darker]": {
-            "comments": "#76bb87"
-        }
+  // editor, workspace, workbench, window and explorer
+  "editor.fontFamily": "Fira Code, monospaced",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.tokenColorCustomizations": {
+    "[Material Night Eighties]": {
+      "comments": "#76bb87"
     },
-    "editor.lightbulb.enabled": "off",
+    "[One Dark Pro Darker]": {
+      "comments": "#76bb87"
+    }
+  },
+  "editor.lightbulb.enabled": "off",
+  "editor.insertSpaces": true,
+  "editor.indentSize": "tabSize",
+  "editor.detectIndentation": true,
+  "editor.suggestSelection": "first",
+  "editor.inlayHints.enabled": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.fontLigatures": false,
+  "editor.minimap.enabled": false,
+  "editor.cursorBlinking": "phase",
+  "editor.inlineSuggest.enabled": true,
+  "editor.codeLens": false,
+  "editor.semanticHighlighting.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.labelFormat": "short",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.externalBrowser": "firefox-developer-edition",
+  "workbench.sideBar.location": "right",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "package.json": "pnpm-lock*, package-lock*, bun.lockb",
+    "tailwind.config.*": "tailwind.config*, postcss.config*",
+    ".env": ".env.*, .envrc",
+    ".env.local": ".env*",
+    ".env.dev": ".env*",
+    "README.*": "LICENSE*, CONTRIBUTING*, CODE_OF_CONDUCT*, REQUIREMENTS*, DEV*",
+    "mix.exs": "mix.lock, .iex.exs",
+    "Dockerfile*": "Dockerfile*, docker-compose.*",
+    "docker-compose.*": "docker-compose.*, .dockerignore, linux.yml, windows.yml, mac.yml, darwin.yml",
+    ".pre-commit-config*": ".pre-commit-*",
+    "requirements.txt": "requirements-dev.txt",
+    "gradlew": "build.gradle*, gradlew*, settings.gradle*",
+    "Cargo.toml": "Cargo.lock",
+    "appsettings.json": "appsettings.*.json",
+    ".npmrc": ".npmrc.*, .nvmrc",
+    "next.*": "next-*",
+    ".gitignore": ".gitattributes",
+    "CMakeLists.txt": "CMakeCache.txt",
+    "vcpkg.json": "vcpkg*",
+    ".formatter.exs": ".credo.exs"
+  },
+  "files.autoSave": "afterDelay",
+  "window.titleBarStyle": "native",
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "compact",
+  "window.zoomLevel": 1,
+  "window.customTitleBarVisibility": "never",
+
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/parser.out": true,
+    "**/parsetab.py": true,
+    "**/.venv": true,
+    "**/.next": true,
+    "**/.elixir_ls": true,
+    "**/_build": true,
+    "**/.turbo": true,
+    "**/.astro": true,
+    "**/.vagrant/": true,
+    "**/.ruff_cache/": true,
+    "**/*.sage.py": true,
+    "**/.vcpkg/": true,
+    "**/build/": true,
+    "**/vcpkg_installed": true
+  },
+  "files.associations": {
+    "*.log.*": "log",
+    "format": "shellscript"
+  },
+
+  // Ctrl+P palette search exclusions
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/rocksdb/**": true,
+    "**/vcpkg_installed/**": true
+  },
+
+  // terminal
+  "terminal.external.linuxExec": "x-terminal-emulator",
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.explorerKind": "external",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.showExitAlert": false,
+
+  // git
+  "git.autofetch": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.defaultDateFormat": null,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+
+  // extensions
+  "extensions.ignoreRecommendations": true,
+
+  // vim keybinds
+  "vim.handleKeys": {
+    "<C-w>": false,
+    "<C-k>": false,
+    "<C-c>": false,
+    "<C-p>": false,
+    "<C-d>": false
+  },
+
+  // python
+  "python.languageServer": "Default",
+  "python.envFile": "${workspaceFolder}/data/.env",
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.autoImportCompletions": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+
+  // c and c++
+  "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.doxygen.generatedStyle": "/**",
+  "C_Cpp.default.enableConfigurationSquiggles": false,
+  "C_Cpp.dimInactiveRegions": false,
+  "[makefile]": {
+    "editor.inlayHints.enabled": "off"
+  },
+  "makefile.configureOnOpen": true,
+  "cmake.configureSettings": {
+    "CMAKE_TOOLCHAIN_FILE": "/home/rui/Clones/vcpkg/scripts/buildsystems/vcpkg.cmake"
+  },
+
+  // html, css, tailwind and js
+  "html.autoClosingTags": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "headerClassName",
+    "ngClass",
+    "class:list"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
     "editor.insertSpaces": true,
-    "editor.indentSize": "tabSize",
-    "editor.detectIndentation": true,
-    "editor.suggestSelection": "first",
-    "editor.inlayHints.enabled": "off",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.copyWithSyntaxHighlighting": false,
-    "editor.fontLigatures": false,
-    "editor.minimap.enabled": false,
-    "editor.cursorBlinking": "phase",
-    "editor.inlineSuggest.enabled": true,
-    "editor.codeLens": false,
-    "editor.semanticHighlighting.enabled": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "One Dark Pro Darker",
-    "workbench.startupEditor": "none",
-    "workbench.editor.enablePreview": false,
-    "workbench.layoutControl.enabled": false,
-    "workbench.editor.labelFormat": "short",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.productIconTheme": "material-product-icons",
-    "workbench.externalBrowser": "firefox-developer-edition",
-    "workbench.sideBar.location": "right",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.compactFolders": true,
-    "explorer.fileNesting.enabled": true,
-    "explorer.fileNesting.patterns": {
-        "package.json": "pnpm-lock*, package-lock*, bun.lockb",
-        "tailwind.config.*": "tailwind.config*, postcss.config*",
-        ".env": ".env.*, .envrc",
-        ".env.local": ".env*",
-        ".env.dev": ".env*",
-        "README.*": "LICENSE*, CONTRIBUTING*, CODE_OF_CONDUCT*, REQUIREMENTS*, DEV*",
-        "mix.exs": "mix.lock, .iex.exs",
-        "Dockerfile*": "Dockerfile*, docker-compose.*",
-        "docker-compose.*": "docker-compose.*, .dockerignore, linux.yml, windows.yml, mac.yml, darwin.yml",
-        ".pre-commit-config*": ".pre-commit-*",
-        "requirements.txt": "requirements-dev.txt",
-        "gradlew": "build.gradle*, gradlew*, settings.gradle*",
-        "Cargo.toml": "Cargo.lock",
-        "appsettings.json": "appsettings.*.json",
-        ".npmrc": ".npmrc.*, .nvmrc",
-        "next.*": "next-*",
-        ".gitignore": ".gitattributes",
-        "CMakeLists.txt": "CMakeCache.txt",
-        "vcpkg.json": "vcpkg*",
-        ".formatter.exs": ".credo.exs"
-    },
-    "files.autoSave": "afterDelay",
-    "window.titleBarStyle": "native",
-    "window.commandCenter": false,
-    "window.menuBarVisibility": "compact",
-    "window.zoomLevel": 1,
-    "window.customTitleBarVisibility": "never",
+    "editor.detectIndentation": false
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
 
-    "files.exclude": {
-        "**/__pycache__": true,
-        "**/.pytest_cache": true,
-        "**/parser.out": true,
-        "**/parsetab.py": true,
-        "**/.venv": true,
-        "**/.next": true,
-        "**/.elixir_ls": true,
-        "**/_build": true,
-        "**/.turbo": true,
-        "**/.astro": true,
-        "**/.vagrant/": true,
-        "**/.ruff_cache/": true,
-        "**/*.sage.py": true,
-        "**/.vcpkg/": true
-    },
-    "files.associations": {
-        "*.log.*": "log",
-        "format": "shellscript"
-    },
+  // java
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-23",
+      "path": "/usr/lib/jvm/java-23-openjdk",
+      "default": true
+    }
+  ],
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-23-openjdk",
+  "java.import.gradle.java.home": "/usr/lib/jvm/java-23-openjdk",
+  "maven.terminal.useJavaHome": true,
+  "redhat.telemetry.enabled": false,
 
-    // Ctrl+P palette search exclusions
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/*.code-search": true,
-        "**/rocksdb/**": true,
-        "**/vcpkg_installed/**": true
-    },
+  // typst
+  "tinymist.fontPaths": [
+    "${workspaceFolder}/fonts",
+    "${workspaceFolder}/template/fonts"
+  ],
+  "[typst]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+    "editor.wordWrap": "on"
+  },
+  "[typst-code]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
 
-    // terminal
-    "terminal.external.linuxExec": "x-terminal-emulator",
-    "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
-    "terminal.explorerKind": "external",
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.showExitAlert": false,
+  // emmet
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "phoenix-heex": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
 
-    // git
-    "git.autofetch": true,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.defaultDateFormat": null,
-    "gitlens.statusBar.enabled": false,
-    "gitlens.codeLens.enabled": false,
-    "git.openRepositoryInParentFolders": "never",
+  // copilot
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "chat.tools.terminal.enableAutoApprove": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "c": false,
+    "log": false,
+    "rust": false,
+    "typst": true,
+    "yaml": true,
+    "shellscript": true,
+    "bibtex": true,
+    "typescriptreact": true,
+    "json": true,
+    "elixir": true,
+    "typescript": true,
+    "cpp": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.nextEditSuggestions.fixes": false,
+  "chat.agent.enabled": true,
+  "mesonbuild.downloadLanguageServer": true,
+  "chat.viewSessions.orientation": "stacked",
 
-    // extensions
-    "extensions.ignoreRecommendations": true,
+  // spell checker
+  "cSpell.language": "en",
+  "cSpell.enabledFileTypes": {
+    "*": false,
+    "typst": true,
+    "markdown": true
+  },
 
-    // vim keybinds
-    "vim.handleKeys": {
-        "<C-w>": false,
-        "<C-k>": false,
-        "<C-c>": false,
-        "<C-p>": false,
-        "<C-d>": false
-    },
-
-    // python
-    "python.languageServer": "Default",
-    "python.envFile": "${workspaceFolder}/data/.env",
-    "python.analysis.completeFunctionParens": true,
-    "python.analysis.autoImportCompletions": true,
-    "[python]": {
-        "editor.formatOnType": true
-    },
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-
-    // c and c++
-    "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
-    "C_Cpp.doxygen.generatedStyle": "/**",
-    "C_Cpp.default.enableConfigurationSquiggles": false,
-    "C_Cpp.dimInactiveRegions": false,
-    "[makefile]": {
-        "editor.inlayHints.enabled": "off"
-    },
-    "makefile.configureOnOpen": true,
-    "cmake.configureSettings": {
-        "CMAKE_TOOLCHAIN_FILE": "/home/rui/Clones/vcpkg/scripts/buildsystems/vcpkg.cmake"
-    },
-
-    // html, css, tailwind and js
-    "html.autoClosingTags": true,
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "css.lint.unknownAtRules": "ignore",
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2,
-        "editor.insertSpaces": true,
-        "editor.detectIndentation": false
-    },
-
-    // java
-    "java.configuration.runtimes": [
-        {
-            "name": "JavaSE-21",
-            "path": "/usr/lib/jvm/java-21-openjdk",
-            "default": true
-        }
-    ],
-    "java.jdt.ls.java.home": "/usr/lib/jvm/java-21-openjdk",
-    "maven.terminal.useJavaHome": true,
-
-    // typst
-    "tinymist.fontPaths": [
-        "${workspaceFolder}/fonts",
-        "${workspaceFolder}/template/fonts"
-    ],
-
-    // misc
-    "[typst]": {
-        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
-    },
-    "[typst-code]": {
-        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    // emmet
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact",
-        "phoenix-heex": "html"
-    },
-    "emmet.syntaxProfiles": {
-        "javascript": "jsx"
-    },
-
-    // copilot
-    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
-    "chat.tools.terminal.enableAutoApprove": false,
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false,
-        "c": true,
-        "log": false,
-        "rust": false
-    },
-    "github.copilot.editor.enableAutoCompletions": false,
-    "github.copilot.nextEditSuggestions.enabled": false,
-    "github.copilot.nextEditSuggestions.fixes": false,
-    "chat.agent.enabled": true,
-    "mesonbuild.downloadLanguageServer": true,
+  // misc
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://ui.shadcn.com": true
+  }
 }
