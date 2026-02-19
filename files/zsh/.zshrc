@@ -51,6 +51,11 @@ export PATH=$HOME/.cargo/bin:$PATH
 # uv
 eval "$(uv generate-shell-completion zsh)"
 
+# android
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # texlive
 export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
 export MANPATH="/usr/local/texlive/2025/texmf-dist/doc/man:${MANPATH:-}"
