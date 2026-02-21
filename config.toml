@@ -16,8 +16,6 @@ hyprland = [
   { type = "symlink", source = "waybar/config.jsonc", target = "~/.config/waybar/config.jsonc" },
   { type = "symlink", source = "waybar/style.css", target = "~/.config/waybar/style.css" },
   { type = "symlink", source = "waybar/scripts", target = "~/.config/waybar/scripts" },
-  "waypaper",
-  { type = "symlink", source = "waypaper/config.ini", target = "~/.config/waypaper/config.ini" },
   "wl-clipboard",
   "xdg-desktop-portal",
   "xdg-desktop-portal-hyprland",
@@ -194,7 +192,8 @@ writing = [
 
 hardware = [
   "usbutils",
-  "dmidecode"
+  "dmidecode",
+  "solaar"
 ]
 
 printing = [
@@ -213,11 +212,16 @@ misc = [
   "man-db",
   "man-pages",
   "polkit-gnome",
-  "satty",
+  "flameshot",
+  "grim",
   { type = "symlink", source = "ssh/config", target = "~/.ssh/config" },
 ]
 
-[omen]
+[tower]
+hardware = [
+  "openrgb",
+  "lm_sensors"
+]
 
 [thinkpad]
 audio = [
