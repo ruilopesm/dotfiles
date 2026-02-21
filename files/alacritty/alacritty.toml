@@ -6,7 +6,7 @@ import = [
 [window]
 dynamic_padding = false
 decorations = "None"
-opacity = 0.9
+opacity = 0.95
 startup_mode = "Windowed"
 dynamic_title = false
 
