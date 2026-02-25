@@ -199,6 +199,7 @@ hardware = [
 printing = [
   "cups",
   { type = "hook", path = "cups.sh" },
+  "cnijfilter",
   "hplip",
   "sane",
   "simple-scan"
