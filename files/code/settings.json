@@ -255,7 +255,8 @@
     "json": true,
     "elixir": true,
     "typescript": true,
-    "cpp": true
+    "cpp": true,
+    "meson": true
   },
   "github.copilot.nextEditSuggestions.enabled": false,
   "github.copilot.nextEditSuggestions.fixes": false,
