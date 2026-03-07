@@ -8,5 +8,5 @@ auth       required     pam_unix.so
 
 account    required     pam_unix.so
 password   required     pam_unix.so
-session    required      pam_unix.so
+session    required     pam_unix.so
 EOF
