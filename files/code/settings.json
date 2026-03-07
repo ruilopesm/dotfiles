@@ -199,8 +199,6 @@
     "editor.insertSpaces": true,
     "editor.detectIndentation": false
   },
-
-  // java
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-23",
@@ -256,7 +254,8 @@
     "elixir": true,
     "typescript": true,
     "cpp": true,
-    "meson": true
+    "meson": true,
+    "toml": true
   },
   "github.copilot.nextEditSuggestions.enabled": false,
   "github.copilot.nextEditSuggestions.fixes": false,
