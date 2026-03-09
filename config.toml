@@ -221,7 +221,8 @@ misc = [
 [tower]
 hardware = [
   "openrgb",
-  "lm_sensors"
+  "lm_sensors",
+  "rocm-smi-lib"
 ]
 
 [thinkpad]
