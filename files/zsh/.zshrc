@@ -55,7 +55,6 @@ eval "$(uv generate-shell-completion zsh)"
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-<<<<<<< Updated upstream
 
 # texlive
 export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
