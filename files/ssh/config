@@ -2,6 +2,10 @@ Host raspberry
     HostName 192.168.1.254
     User rui
 
+Host tower
+    HostName 192.168.1.248
+    User rui
+
 Host lab
     HostName cloud118
     User gsd
