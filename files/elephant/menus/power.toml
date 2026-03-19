@@ -20,6 +20,11 @@ icon = "system-lock-screen"
 actions = { "select" = "hyprlock" }
 
 [[entries]]
+text = "Suspend"
+icon = "system-suspend"
+actions = { "select" = "sync && systemctl suspend" }
+
+[[entries]]
 text = "Logout"
 icon = "system-log-out"
 action = { "select" = "hyprctl dispatch exit" }
