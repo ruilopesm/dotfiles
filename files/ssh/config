@@ -18,6 +18,18 @@ Host cloud80
     HostName cloud80
     User gsd
 
+Host cloud117
+    HostName cloud117
+    User gsd
+
+Host cloud112
+    HostName cloud112
+    User gsd
+
+Host cloud144
+    HostName cloud144
+    User gsd
+
 Host epl
     HostName epl.di.uminho.pt
     User cesium
