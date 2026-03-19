@@ -255,7 +255,8 @@
     "typescript": true,
     "cpp": true,
     "meson": true,
-    "toml": true
+    "toml": true,
+    "css": true
   },
   "github.copilot.nextEditSuggestions.enabled": false,
   "github.copilot.nextEditSuggestions.fixes": false,
