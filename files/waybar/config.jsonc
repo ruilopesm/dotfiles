@@ -27,7 +27,7 @@
       "format": "{artist} - {title}",
       "tooltip": false,
       "format-paused": "{status_icon} Paused",
-      "title-len": 50,
+      "title-len": 40,
       "status-icons": {
         "paused": ""
       }
@@ -41,9 +41,9 @@
     "pulseaudio": {
       "format": "VOL {volume}%",
       "format-muted": "VOL {volume}%",
-      "format-bluetooth": "XM4 {volume}%",
-      "format-bluetooth-muted": "XM4 {volume}%",
-      "tooltip": true,
+      "format-bluetooth": "{desc} {volume}%",
+      "format-bluetooth-muted": "{desc} {volume}%",
+      "tooltip": false,
       "on-click": "pavucontrol",
       "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
       "scroll-step": "5.0"
@@ -51,7 +51,8 @@
     "cpu": {
       "format": "CPU {usage}%",
       "interval": 1,
-      "tooltip": true
+      "tooltip": true,
+      "on-click": "foot btop"
     },
     "memory": {
       "interval": 10,
