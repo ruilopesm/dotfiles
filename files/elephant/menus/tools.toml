@@ -7,7 +7,7 @@ fixed_order = true
 [[entries]]
 text = "Screenshot"
 icon = "camera-photo"
-actions = { "select" = "$DOTFILES_DIRECTORY/files/scripts/screenshot" }
+actions = { "select" = "sh -c 'sleep 0.25; $DOTFILES_DIRECTORY/files/scripts/screenshot >/dev/null 2>&1 &'" }
 
 [[entries]]
 text = "Color Picker"
