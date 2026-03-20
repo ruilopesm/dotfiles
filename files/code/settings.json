@@ -224,6 +224,11 @@
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
 
+  // markdown
+  "[markdown]": {
+    "editor.wordWrap": "on"
+  },
+
   // emmet
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
