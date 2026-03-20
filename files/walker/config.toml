@@ -9,6 +9,7 @@ next = ["Down"]
 previous = ["Up"]
 resume_last_query = ["ctrl r"]
 quick_activate = ["F1", "F2", "F3", "F4"]
+show_actions = ["alt j"]
 
 [providers]
 default = [
@@ -32,6 +33,10 @@ provider = "clipboard"
 [providers.clipboard]
 time_format = "%d/%m - %H:%M"
 
+[[providers.prefixes]]
+prefix = "."
+provider = "bluetooth"
+
 [providers.actions]
 providerlist = [
   { action = "activate", default = true, bind = "Return", after = "ClearReload" }
@@ -46,4 +51,11 @@ calc = [
 clipboard = [
   { action = "copy", default = true, bind = "Return" },
   { action = "remove", bind = "ctrl d", after = "ClearReload" }
+]
+
+bluetooth = [
+  { action = "find", bind = "ctrl f", after = "AsyncClearReload" },
+  { action = "pair", bind = "Return", after = "AsyncReload" },
+  { action = "connect", default = true, bind = "Return", after = "AsyncReload" },
+  { action = "disconnect", default = true, bind = "Return", after = "AsyncReload" }
 ]

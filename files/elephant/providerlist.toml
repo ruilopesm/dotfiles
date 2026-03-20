@@ -1,2 +1,2 @@
 hide_from_providerlist = true
-hidden = ["desktopapplications", "calc", "clipboard"]
+hidden = ["desktopapplications", "calc", "clipboard", "bluetooth"]

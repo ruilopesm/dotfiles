@@ -34,9 +34,6 @@ scrollbar {
   color: @theme_fg_color;
 }
 
-.box {
-}
-
 .search-container {
   border-radius: 10px;
 }
@@ -52,24 +49,8 @@ scrollbar {
   color: @theme_fg_color;
 }
 
-.input:focus,
-.input:active {
-}
-
-.content-container {
-}
-
-.placeholder {
-}
-
-.scroll {
-}
-
 .list {
   color: @theme_fg_color;
-}
-
-child {
 }
 
 .item-box {
@@ -87,9 +68,6 @@ child {
 child:hover .item-box,
 child:selected .item-box {
   background: alpha(@accent_bg_color, 0.25);
-}
-
-.item-text-box {
 }
 
 .item-text {
@@ -120,9 +98,6 @@ child:selected .item-box {
 
 .calc .item-text {
   font-size: 24px;
-}
-
-.calc .item-subtext {
 }
 
 .symbols .item-image {

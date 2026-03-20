@@ -86,6 +86,7 @@ docker = [
 
 menu = [
   "elephant",
+  "elephant-bluetooth",
   "elephant-calc",
   "elephant-clipboard",
   "elephant-desktopapplications",
@@ -210,13 +211,15 @@ printing = [
 misc = [
   "dunst",
   { type = "symlink", source = "dunst/dunstrc", target = "~/.config/dunst/dunstrc" },
+  "flameshot",
   "gnome-keyring",
+  "grim",
   "inotify-tools",
+  "imagemagick",
   "man-db",
   "man-pages",
   "polkit-gnome",
-  "flameshot",
-  "grim",
+  "libqalculate",
   { type = "symlink", source = "ssh/config", target = "~/.ssh/config" },
 ]
 
@@ -238,6 +241,5 @@ hardware = [
   "intel-ucode",
   "fprintd",
   "tlp",
-  "imagemagick",
   { type = "hook", path = "fingerprint.sh" }
 ]
