@@ -13,7 +13,7 @@
   ui = true
 
 [web]
-  browser = firefox-developer-edition
+  browser = zen-browser
 
 [init]
   defaultBranch = main

@@ -33,7 +33,7 @@
   "workbench.editor.labelFormat": "short",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "material-product-icons",
-  "workbench.externalBrowser": "firefox-developer-edition",
+  "workbench.externalBrowser": "zen-browser",
   "workbench.sideBar.location": "right",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,

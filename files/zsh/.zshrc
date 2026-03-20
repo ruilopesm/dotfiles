@@ -21,7 +21,7 @@ source $HOME/.zsh_functions
 export LANG=en_US.UTF-8
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=nvim
-export BROWSER=/usr/bin/firefox-developer-edition
+export BROWSER=/usr/bin/zen-browser
 export TERM=alacritty
 
 ENABLE_CORRECTION="true"
