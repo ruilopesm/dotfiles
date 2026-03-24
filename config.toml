@@ -11,6 +11,7 @@ hyprland = [
   "hyprsunset",
   { type = "symlink", source = "hypr/hyprsunset.conf", target = "~/.config/hypr/hyprsunset.conf" },
   "hyprshot",
+  "slurp",
   "hyprsysteminfo",
   "waybar",
   { type = "symlink", source = "waybar/config.jsonc", target = "~/.config/waybar/config.jsonc" },
@@ -211,7 +212,6 @@ printing = [
 misc = [
   "dunst",
   { type = "symlink", source = "dunst/dunstrc", target = "~/.config/dunst/dunstrc" },
-  "flameshot",
   "gnome-keyring",
   "grim",
   "inotify-tools",

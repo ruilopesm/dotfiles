@@ -1,3 +1,8 @@
 #!/bin/sh
 
-flameshot gui
+pkill slurp || hyprshot -m region --raw |
+  satty --filename - \
+    --early-exit \
+    --actions-on-enter save-to-clipboard \
+    --save-after-copy \
+    --copy-command 'wl-copy'
