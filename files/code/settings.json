@@ -288,5 +288,6 @@
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
     "https://ui.shadcn.com": true
-  }
+  },
+  "chat.tips.enabled": false
 }
