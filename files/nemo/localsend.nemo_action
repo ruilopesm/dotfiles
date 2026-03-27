@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Share with LocalSend
+Comment=Send the selected files or folders with LocalSend
+Exec=localsend "%F"
+Icon-Name=localsend
+Selection=notnone
+Extensions=any;
+Quote=double
+Dependencies=localsend
