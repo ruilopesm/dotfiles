@@ -6,7 +6,7 @@ This is a collection of my personal configuration files for various programs and
 
 Before installing the `dotfiles`, make sure you have the following:
 
-+ Python 3.13+ and [uv](https://docs.astral.sh/uv/) (recommended for project dependency management)
++ Python 3.13+ and [uv](https://docs.astral.sh/uv/)
 + [yay](https://github.com/Jguer/yay) (or any other AUR helper, but you will need to modify the `config.py` script accordingly)
 
 ### Installation
@@ -21,19 +21,12 @@ Before installing the `dotfiles`, make sure you have the following:
 > [!NOTE]
 > From now on, if `uv` happens to not work, call it from `~/.local/bin/uv`.
 
-2. Install dependencies with uv:
+2. Run the installation script:
 
    ```bash
-   uv sync
-   ```
+   ./install --machine thinkpad
 
-3. Run the installation script:
-
-   ```bash
-   uv run -m install --machine thinkpad
-    
-   # without specifying a machine profile
-   uv run -m install
+   ./install --help
    ```
 
 ### System
