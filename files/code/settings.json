@@ -261,7 +261,8 @@
     "cpp": true,
     "meson": true,
     "toml": true,
-    "css": true
+    "css": true,
+    "python": true
   },
   "github.copilot.nextEditSuggestions.enabled": false,
   "github.copilot.nextEditSuggestions.fixes": false,
