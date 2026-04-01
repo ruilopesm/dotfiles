@@ -158,7 +158,6 @@ terminal = [
   "reflector",
   "ripgrep",
   { type = "hook", path = "reflector.sh" },
-  "speedtest-cli",
   "git-delta",
   "glow",
   "neofetch",
