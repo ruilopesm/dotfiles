@@ -164,6 +164,7 @@ terminal = [
   { type = "symlink", source = "neofetch/config.conf", target = "~/.config/neofetch/config.conf" },
   "unzip",
   "tree",
+  "tlrc-bin",
   "tty-clock",
   "upower",
   "wget",
