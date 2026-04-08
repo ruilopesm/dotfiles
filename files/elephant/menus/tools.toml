@@ -12,4 +12,4 @@ actions = { "select" = "sh -c 'sleep 0.25; $DOTFILES_DIRECTORY/files/scripts/scr
 [[entries]]
 text = "Color Picker"
 icon = "gtk-color-picker"
-actions = { "select" = "hyprpicker -aq" }
+actions = { "select" = "sh -c 'sleep 0.25; hyprpicker -aq'" }
