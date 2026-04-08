@@ -5,3 +5,4 @@ node = "24.13.1"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
+disable_tools = ["go", "python", "rust"]
