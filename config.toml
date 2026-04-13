@@ -106,7 +106,7 @@ apps = [
   "eog",
   "evince",
   "zen-browser-bin",
-  "jellyfin-desktop",
+  "jellyfin-desktop-git",
   "localsend",
   "mattermost-desktop",
   { type = "symlink", source = "mattermost/config.json", target = "~/.config/Mattermost/config.json" },
