@@ -291,5 +291,6 @@
     "https://ui.shadcn.com": true
   },
   "chat.tips.enabled": false,
-  "python.analysis.typeCheckingMode": "standard"
+  "python.analysis.typeCheckingMode": "standard",
+  "diffEditor.hideUnchangedRegions.enabled": true
 }
