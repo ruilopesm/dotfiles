@@ -19,7 +19,7 @@
   defaultBranch = main
 
 [commit]
-	gpgsign = true
+  gpgsign = true
 
 [push]
   default = simple
@@ -29,7 +29,7 @@
   rebase = true
 
 [tag]
-	gpgSign = true
+  gpgSign = true
 
 [log]
   date = auto:human
