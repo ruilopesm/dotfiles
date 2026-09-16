@@ -293,5 +293,6 @@
   },
   "chat.tips.enabled": false,
   "python.analysis.typeCheckingMode": "standard",
-  "diffEditor.hideUnchangedRegions.enabled": true
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "todo-tree.ripgrep.ripgrep": "/usr/bin/rg"
 }
