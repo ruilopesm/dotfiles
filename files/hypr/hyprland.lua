@@ -1,0 +1,10 @@
+local vars = require("modules.vars")
+
+require("modules.env")(vars)
+require("modules.monitors")(vars)
+require("modules.autostart")(vars)
+require("modules.options")(vars)
+require("modules.animations")(vars)
+require("modules.input")(vars)
+require("modules.binds")(vars)
+require("modules.rules")(vars)

@@ -2,6 +2,8 @@
 hyprland = [
   "hyprland",
   { type = "symlink", source = "hypr/hyprland.conf", target = "~/.config/hypr/hyprland.conf" },
+  { type = "symlink", source = "hypr/hyprland.lua", target = "~/.config/hypr/hyprland.lua" },
+  { type = "symlink", source = "hypr/modules", target = "~/.config/hypr/modules" },
   "hyprpaper",
   { type = "symlink", source = "hypr/hyprpaper.conf", target = "~/.config/hypr/hyprpaper.conf" },
   "hyprpicker",
@@ -9,7 +11,6 @@ hyprland = [
   { type = "symlink", source = "hypr/hyprlock.conf", target = "~/.config/hypr/hyprlock.conf" },
   "hyprmon-bin",
   "hyprsunset",
-  { type = "symlink", source = "hypr/hyprsunset.conf", target = "~/.config/hypr/hyprsunset.conf" },
   "hyprshot",
   "slurp",
   "hyprsysteminfo",
