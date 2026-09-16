@@ -5,18 +5,18 @@ chsh -s $(which zsh)
 KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 idempotent_clone() {
-    local url="$1"
-    local dir="$2"
+  local url="$1"
+  local dir="$2"
 
-    if [ -d "$dir/.git" ]; then
-        git -C "$dir" pull --ff-only || return 1
-    fi
+  if [ -d "$dir/.git" ]; then
+    git -C "$dir" pull --ff-only || return 1
+  fi
 
-    if [ -e "$dir" ]; then
-        return 0
-    fi
+  if [ -e "$dir" ]; then
+    return 0
+  fi
 
-    git clone "$url" "$dir" || return 1
+  git clone "$url" "$dir" || return 1
 }
 
 idempotent_clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions

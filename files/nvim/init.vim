@@ -10,9 +10,9 @@ set guifont=Fira\ Code\ 10
 
 " Shell
 if exists('$SHELL')
-    set shell=$SHELL
+  set shell=$SHELL
 else
-    set shell=$SHELL
+  set shell=/bin/bash
 endif
 
 " Enconding
@@ -92,17 +92,20 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'lambdalisue/nerdfont.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
-Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
-colorscheme material
+if !empty(globpath(&runtimepath, 'colors/material.*'))
+  colorscheme material
+endif
 
 set wildmode=list:longest,list:full
-call wilder#setup({'modes': [':', '/', '?']})
-call wilder#set_option('renderer', wilder#popupmenu_renderer({'highlighter': wilder#basic_highlighter()}))
+if exists('*wilder#setup')
+  call wilder#setup({'modes': [':', '/', '?']})
+  call wilder#set_option('renderer', wilder#popupmenu_renderer({'highlighter': wilder#basic_highlighter()}))
+endif
 
 " Python
-let g:python_host_prog='~/.asdf/installs/python/2.7.18/bin/python'
-let g:python3_host_prog='~/.asdf/installs/python/3.10.5/bin/python'
+if executable('/usr/bin/python3')
+  let g:python3_host_prog = '/usr/bin/python3'
+endif

@@ -171,6 +171,8 @@ terminal = [
   "valgrind",
   "vim",
   "neovim",
+  { type = "symlink", source = "nvim", target = "~/.config/nvim" },
+  { type = "hook", path = "nvim.sh" },
   "zip",
   "zsh",
   { type = "symlink", source = "zsh/.zsh_aliases", target = "~/.zsh_aliases" },
