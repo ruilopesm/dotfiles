@@ -1,7 +1,6 @@
 [common]
 hyprland = [
   "hyprland",
-  { type = "symlink", source = "hypr/hyprland.conf", target = "~/.config/hypr/hyprland.conf" },
   { type = "symlink", source = "hypr/hyprland.lua", target = "~/.config/hypr/hyprland.lua" },
   { type = "symlink", source = "hypr/modules", target = "~/.config/hypr/modules" },
   "hyprpaper",
