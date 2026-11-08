@@ -11,7 +11,7 @@ plugins=(git zsh-autosuggestions colored-man-pages command-not-found fzf-tab z a
 export HISTFILESIZE=100000000000
 export SAVEHIST=5000000
 export HISTSIZE=5000000
-HIST_STAMPS="%d-%m-%Y"
+HIST_STAMPS="%d-%m-%Y %H:%M:%S"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases

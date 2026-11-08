@@ -1,178 +1,258 @@
 # Shows weather of specified location (argument: location)
 function weather() {
-    curl wttr.in/$1
+  curl wttr.in/$1
 }
 
 # Shows a list with the most used commands (argument: number of most used commands)
 function topcmd() {
-    history | awk '{print $2}' | sort | uniq -c | sort -nr | column -t | nl | head -n$1
+  history | awk '{print $2}' | sort | uniq -c | sort -nr | column -t | nl | head -n$1
 }
 
 # Creates a folder and changes the directory into it (argument: folder name)
 function mkcd() {
-    mkdir -p $1
-    cd $1
+  mkdir -p $1
+  cd $1
 }
 
 # Opens given file using xdg-open (argument: filename)
 function open() {
-    xdg-open $@ > /dev/null 2> /dev/null &
-    disown
+  xdg-open $@ > /dev/null 2> /dev/null &
+  disown
 }
 
 # Clones a repository and changes the directory into it (argument: repository link)
 function clonecd() {
-    git clone --recurse-submodules $@
-    cd "$(basename "$_" .git)"
+  git clone --recurse-submodules $@
+  cd "$(basename "$_" .git)"
 }
 
 # Changes the current branch into a given PR branch (argument: PR number)
 function pr() {
-    gh pr checkout $1
+  gh pr checkout $1
 }
 
 # Commits with a specific backup message (used in obsidian vault)
 function gcdatetime() {
-    local timestamp=$(TZ='Europe/Lisbon' date '+%d-%m-%Y %H:%M:%S')
-    git commit -m "backup: $timestamp @ $(uname -n)"
+  local timestamp=$(TZ='Europe/Lisbon' date '+%d-%m-%Y %H:%M:%S')
+  git commit -m "backup: $timestamp @ $(uname -n)"
 }
 
 # Rescues a given file from the Downloads folder
 function rescue() {
-    local src
-    if [ $# -gt 0 ]; then
-        src=~/Downloads/"$1"
-    else
-        file=$(eza --sort oldest ~/Downloads | fzf --multi --ansi | tr -d "'")
-        [ -z "$file" ] && return 1
-        src=~/Downloads/"$file"
-    fi
+  local src
+  if [ $# -gt 0 ]; then
+    src=~/Downloads/"$1"
+  else
+    file=$(eza --sort oldest ~/Downloads | fzf --multi --ansi | tr -d "'")
+    [ -z "$file" ] && return 1
+    src=~/Downloads/"$file"
+  fi
 
-    mv "$src" .
+  mv "$src" .
 }
 
 # Searches for a given content in the current directory and opens VSCode on selected line
 function lupa() {
-    rg --column --line-number --no-heading --color=always --smart-case --ignore-file .gitignore . | fzf --ansi \
-       --bind 'enter:become(code --goto {1}:{2})' \
-       --delimiter : \
-       --preview 'bat --style=full --color=always --highlight-line {2} {1}' \
-       --preview-window '~4,+{2}+4/3,<80(up)'
+  rg --column --line-number --no-heading --color=always --smart-case --ignore-file .gitignore . | fzf --ansi \
+    --bind 'enter:become(code --goto {1}:{2})' \
+    --delimiter : \
+    --preview 'bat --style=full --color=always --highlight-line {2} {1}' \
+    --preview-window '~4,+{2}+4/3,<80(up)'
 }
 
 ## SSH ##
 
 function remote() {
-    local folder=${1:-thesis}
-    code --folder-uri "vscode-remote://ssh-remote+lab/home/gsd/$folder"
+  local folder=${1:-thesis}
+  code --folder-uri "vscode-remote://ssh-remote+lab/home/gsd/$folder"
 }
 
 # Same as git push, but afterwards git pulls on the given remote server
 function gpremote() { 
-    local remote=$1
-    local repo=$2
+  local remote=$1
+  local repo=$2
 
-    if [ -z "$remote" ] || [ -z "$repo" ]; then
-        echo "Usage: gpremote [remote] [repo]" >&2
-        return 1
-    fi
-
-    git push && ssh "$remote" "cd $repo && git pull"
-}
-
-function to() {
-  local host dir choice
-  if [ -z "$1" ]; then
-    echo "Usage: to user@host" >&2
+  if [ -z "$remote" ] || [ -z "$repo" ]; then
+    echo "Usage: gpremote [remote] [repo]" >&2
     return 1
   fi
 
-  host=$1
-  dir="."
-
-  while true; do
-    choice=$(find "$dir" -maxdepth 1 ! -path "$dir" -printf "%P\n" \
-             | fzf --prompt="Local [$dir] ▶ " \
-             ) || return 1
-
-    if [ -d "$dir/$choice" ]; then
-      dir="$dir/$choice"
-    else
-      break
-    fi
-  done
-
-  scp "$dir/$choice" "$host:."
+  git push && ssh "$remote" "cd $repo && git pull"
 }
 
-from() {
-  local host="" dir choice start_in_root=0 folder=""
+_transfer_usage() {
+  echo "Usage: $1 [--root] [--folder PATH] [--ignore GITIGNORE] user@host"
+  echo "  --root          Start browsing from / instead of the home directory"
+  echo "  --folder PATH   Transfer PATH directly (skip fzf)"
+  echo "  --ignore FILE   Respect FILE and nested .gitignore files (uses rsync)"
+}
+
+_transfer_parse_args() {
+  local command="$1" host="" folder="" ignore_file="" start_in_root=0
+  shift
 
   while [[ $# -gt 0 ]]; do
     case "$1" in
       --root) start_in_root=1; shift ;;
-      --folder) folder="$2"; shift 2 ;;
-      -h | --help)
-        echo "Usage: from [--root] [--folder PATH] user@host"
-        echo "  --root          Start browsing from / instead of ~"
-        echo "  --folder PATH   Download PATH directly (skip fzf)"
-        return 0
+      --folder)
+        if [[ $# -lt 2 || -z "$2" ]]; then
+          _transfer_usage "$command"
+          return 1
+        fi
+        folder="$2"
+        shift 2
         ;;
-
+      --ignore)
+        if [[ $# -lt 2 || -z "$2" ]]; then
+          _transfer_usage "$command"
+          return 1
+        fi
+        ignore_file="$2"
+        shift 2
+        ;;
+      -h | --help)
+        _transfer_usage "$command"
+        return 2
+        ;;
       *) host="$1"; shift ;;
     esac
   done
 
   if [[ -z "$host" ]]; then
-    echo "Usage: from [--root] [--folder PATH] user@host"
+    _transfer_usage "$command"
     return 1
   fi
 
-  _q() { printf "%q" "$1"; }
-  _q_or_raw_tilde() {
-    if [[ "$1" == ~* ]]; then printf "%s" "$1"; else _q "$1"; fi
-  }
+  if [[ -n "$ignore_file" && -z "$folder" ]]; then
+    folder="${ignore_file:h}"
+  fi
 
-  _remote_is_dir() {
-    local p="$1"
-    ssh "$host" "d=$(_q_or_raw_tilde "$p"); [ -d \"\$d\" ]"
-  }
+  reply=("$host" "$folder" "$ignore_file" "$start_in_root")
+}
 
-  _remote_list() {
-    local p="$1"
-    ssh "$host" "d=$(_q_or_raw_tilde "$p"); find \"\$d\" -maxdepth 1 ! -path \"\$d\" -printf '%P\n'"
-  }
-
-  if [[ -n "$folder" ]]; then
-    if _remote_is_dir "$folder"; then
-      scp -r "$host:$(_q_or_raw_tilde "$folder")" .
-    else
-      scp    "$host:$(_q_or_raw_tilde "$folder")" .
+_transfer_local_path() {
+  local transfer_path="$1" host="$2" ignore_file="${3:-}"
+  if [[ -n "$ignore_file" ]]; then
+    if [[ ! -d "$transfer_path" || ! -f "$ignore_file" ]]; then
+      echo "to: --ignore requires a directory and an existing .gitignore file" >&2
+      return 1
     fi
+    _transfer_rsync "$transfer_path" "$host:." "${ignore_file:t}"
     return $?
   fi
 
-  if [[ $start_in_root -eq 1 ]]; then
-    dir="/"
+  if [[ -d "$transfer_path" ]]; then
+    _transfer_scp -r "$transfer_path" "$host:."
   else
-    dir="~"
+    _transfer_scp "$transfer_path" "$host:."
+  fi
+}
+
+_transfer_scp() {
+  /usr/bin/scp "$@"
+}
+
+_transfer_rsync() {
+  local source="$1" destination="$2" ignore_name="$3"
+  /usr/bin/rsync -a --filter=":- $ignore_name" "$source" "$destination"
+}
+
+_transfer_remote_path() {
+  local host="$1" transfer_path="$2" destination="${3:-.}" ignore_file="${4:-}"
+  if [[ -n "$ignore_file" ]]; then
+    if ! _transfer_remote_is_dir "$host" "$transfer_path" || ! _transfer_remote_is_file "$host" "$ignore_file"; then
+      echo "from: --ignore requires a remote directory and an existing .gitignore file" >&2
+      return 1
+    fi
+    _transfer_rsync "$host:$(_transfer_quote_remote_path "$transfer_path")" "$destination" "${ignore_file:t}"
+    return $?
   fi
 
-  while true; do
-    choice=$(
-      _remote_list "$dir" | fzf --prompt="Remote [$host:$dir] ▶ "
-    ) || return 1
+  if _transfer_remote_is_dir "$host" "$transfer_path"; then
+    _transfer_scp -r "$host:$(_transfer_quote_remote_path "$transfer_path")" "$destination"
+  else
+    _transfer_scp "$host:$(_transfer_quote_remote_path "$transfer_path")" "$destination"
+  fi
+}
 
-    if _remote_is_dir "$dir/$choice"; then
+_transfer_quote_remote_path() {
+  local transfer_path="$1"
+  if [[ "$transfer_path" == ~* ]]; then
+    printf "%s" "$transfer_path"
+  else
+    printf "%q" "$transfer_path"
+  fi
+}
+
+_transfer_remote_is_dir() {
+  local host="$1" transfer_path="$2"
+  ssh "$host" "d=$(_transfer_quote_remote_path "$transfer_path"); [ -d \"\$d\" ]"
+}
+
+_transfer_remote_is_file() {
+  local host="$1" transfer_path="$2"
+  ssh "$host" "p=$(_transfer_quote_remote_path "$transfer_path"); [ -f \"\$p\" ]"
+}
+
+_transfer_remote_list() {
+  local host="$1" transfer_path="$2"
+  ssh "$host" "d=$(_transfer_quote_remote_path "$transfer_path"); find \"\$d\" -maxdepth 1 ! -path \"\$d\" -printf '%P\\n'"
+}
+
+to() {
+  local host folder ignore_file start_in_root dir choice
+  _transfer_parse_args to "$@"
+  case $? in
+    0) ;;
+    2) return 0 ;;
+    *) return 1 ;;
+  esac
+  host="$reply[1]"; folder="$reply[2]"; ignore_file="$reply[3]"; start_in_root="$reply[4]"
+
+  if [[ -n "$folder" ]]; then
+    _transfer_local_path "$folder" "$host" "$ignore_file"
+    return $?
+  fi
+
+  dir=$([[ $start_in_root -eq 1 ]] && echo / || echo .)
+  while true; do
+    choice=$(find "$dir" -maxdepth 1 ! -path "$dir" -printf "%P\n" |
+      fzf --prompt="Local [$dir] ▶ ") || return 1
+    if [[ -d "$dir/$choice" ]]; then
       dir="$dir/$choice"
     else
       break
     fi
   done
 
-  if _remote_is_dir "$dir/$choice"; then
-    scp -r "$host:$(_q_or_raw_tilde "$dir/$choice")" .
-  else
-    scp    "$host:$(_q_or_raw_tilde "$dir/$choice")" .
+  _transfer_local_path "$dir/$choice" "$host"
+}
+
+from() {
+  local host folder ignore_file start_in_root dir choice
+  _transfer_parse_args from "$@"
+  case $? in
+    0) ;;
+    2) return 0 ;;
+    *) return 1 ;;
+  esac
+  host="$reply[1]"; folder="$reply[2]"; ignore_file="$reply[3]"; start_in_root="$reply[4]"
+
+  if [[ -n "$folder" ]]; then
+    _transfer_remote_path "$host" "$folder" . "$ignore_file"
+    return $?
   fi
+
+  dir=$([[ $start_in_root -eq 1 ]] && echo / || echo ~)
+  while true; do
+    choice=$(_transfer_remote_list "$host" "$dir" |
+      fzf --prompt="Remote [$host:$dir] ▶ ") || return 1
+    if _transfer_remote_is_dir "$host" "$dir/$choice"; then
+      dir="$dir/$choice"
+    else
+      break
+    fi
+  done
+
+  _transfer_remote_path "$host" "$dir/$choice"
 }
