@@ -7,27 +7,19 @@ Host tower
     User rui
 
 Host lab
-    HostName cloud118
+    HostName cloud118.cluster.lsd.di.uminho.pt
     User gsd
 
 Host li3
     HostName li3.di.uminho.pt
     User root
 
-Host cloud80
-    HostName cloud80
+Host arm
+    HostName arm.cluster.lsd.di.uminho.pt
     User gsd
 
-Host cloud117
-    HostName cloud117
-    User gsd
-
-Host cloud112
-    HostName cloud112
-    User gsd
-
-Host cloud144
-    HostName cloud144
+Host mexilhao
+    HostName mexilhao.cluster.lsd.di.uminho.pt
     User gsd
 
 Host epl
