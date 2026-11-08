@@ -1,15 +1,20 @@
 name = "tools"
 name_pretty = "Tools"
-icon = "tools"
 global_search = false
 fixed_order = true
 
 [[entries]]
 text = "Screenshot"
-icon = "camera-photo"
 actions = { "select" = "sh -c 'sleep 0.25; $DOTFILES_DIRECTORY/files/scripts/screenshot >/dev/null 2>&1 &'" }
 
 [[entries]]
 text = "Color Picker"
-icon = "gtk-color-picker"
 actions = { "select" = "sh -c 'sleep 0.25; hyprpicker -aq'" }
+
+[[entries]]
+text = "Thinkpad Speaker (Desktop)"
+actions = { "select" = "sh -c 'sleep 0.25'"}
+
+[[entries]]
+text = "Thinkpad Speaker (Laptop)"
+actions = { "select" = "sh -c 'sleep 0.25'"}

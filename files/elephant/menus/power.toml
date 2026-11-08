@@ -1,30 +1,24 @@
 name = "power"
 name_pretty = "Power"
-icon = "system-shutdown"
 global_search = false
 fixed_order = true
 
 [[entries]]
 text = "Shutdown"
-icon = "system-shutdown"
 actions = { "select" = "systemctl poweroff" }
 
 [[entries]]
 text = "Reboot"
-icon = "system-reboot"
 actions = { "select" = "systemctl reboot" }
 
 [[entries]]
 text = "Lock"
-icon = "system-lock-screen"
 actions = { "select" = "hyprlock" }
 
 [[entries]]
 text = "Suspend"
-icon = "system-suspend"
 actions = { "select" = "sync && systemctl suspend" }
 
 [[entries]]
 text = "Logout"
-icon = "system-log-out"
 action = { "select" = "hyprctl dispatch exit" }
