@@ -84,8 +84,9 @@
     "**/.ruff_cache/": true,
     "**/*.sage.py": true,
     "**/.vcpkg/": true,
-    "**/build/": true,
-    "**/vcpkg_installed": true
+    "**/vcpkg_installed": true,
+    "**/.stfolder/": true,
+    "**/.stignore": true,
   },
   "files.associations": {
     "*.log.*": "log",
@@ -97,7 +98,6 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "**/*.code-search": true,
-    "**/rocksdb/**": true,
     "**/vcpkg_installed/**": true
   },
 
@@ -244,13 +244,10 @@
   "github.copilot.chat.codeGeneration.useInstructionFiles": true,
   "chat.tools.terminal.enableAutoApprove": false,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": true,
     "scminput": false,
-    "c": false,
-    "log": false,
-    "rust": false,
     "typst": true,
     "yaml": true,
     "shellscript": true,
@@ -293,6 +290,8 @@
   },
   "chat.tips.enabled": false,
   "python.analysis.typeCheckingMode": "standard",
+  "todo-tree.ripgrep.ripgrep": "/usr/bin/rg",
+  "chat.disableAIFeatures": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
-  "todo-tree.ripgrep.ripgrep": "/usr/bin/rg"
+  "diffEditor.renderSideBySide": false
 }
