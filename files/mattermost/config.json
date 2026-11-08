@@ -4,6 +4,7 @@
     {
       "name": "INESC TEC",
       "url": "https://chat.inesctec.pt/",
+      "isPredefined": false,
       "order": 0
     }
   ],
@@ -31,5 +32,12 @@
   "themeSyncing": true,
   "alwaysClose": true,
   "autoCheckForUpdates": true,
-  "alwaysMinimize": true
+  "alwaysMinimize": true,
+  "enableSentry": true,
+  "skippedVersions": [
+    "6.2.0"
+  ],
+  "useNativeTitleBar": false,
+  "enableSessionAttributes": true,
+  "trustedEmbeddedMediaOrigins": []
 }
