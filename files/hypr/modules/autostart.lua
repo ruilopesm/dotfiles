@@ -16,10 +16,17 @@ return function(vars)
         hl.exec_cmd("nm-applet")
         hl.exec_cmd("blueman-applet")
         hl.exec_cmd("Telegram -startintray")
-        hl.exec_cmd("mattermost-desktop --hidden")
         -- hl.exec_cmd("slack -u")
-        -- hl.exec_cmd("teams-for-linux --minimized")
 
         hl.exec_cmd("waybar")
+        hl.exec_cmd([[
+            for i in $(seq 1 30); do
+                busctl --user --auto-start=no --timeout=1 get-property org.kde.StatusNotifierWatcher /StatusNotifierWatcher org.kde.StatusNotifierWatcher IsStatusNotifierHostRegistered 2>/dev/null | grep -qx 'b true' && break
+                sleep 1
+            done
+
+            mattermost-desktop --hidden &
+            teams-for-linux --minimized
+        ]])
     end)
 end
