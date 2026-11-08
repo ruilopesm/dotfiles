@@ -1,7 +1,9 @@
 [tools]
-elixir = "1.18"
+bun = "latest"
+elixir = "1.20"
 erlang = "28.0"
 node = "24.13.1"
+zig = "0.16"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
