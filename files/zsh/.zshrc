@@ -42,6 +42,9 @@ eval "$(/home/rui/.local/bin/mise activate zsh)"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# atuin (after fzf, to take over Ctrl+R)
+command -v atuin >/dev/null && eval "$(atuin init zsh --disable-up-arrow)"
+
 # elixir
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 4096000"
 
