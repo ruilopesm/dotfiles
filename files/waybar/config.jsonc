@@ -5,6 +5,7 @@
     "modules-left": ["custom/linux", "hyprland/workspaces", "mpris"],
     "modules-center": ["clock"],
     "modules-right": [
+      "bluetooth",
       "pulseaudio",
       "cpu",
       "memory",
@@ -37,6 +38,13 @@
       "tooltip": false,
       "format": "{:%B %d | %R:%S}",
       "format-alt": "{:%A, %B %d, %Y | %R:%S}"
+    },
+    "bluetooth": {
+      "format": "",
+      "format-connected": "BT",
+      "on-click": "blueman-manager",
+      "tooltip-format-connected": "{device_alias}\nBattery: {device_battery_percentage}%",
+      "tooltip-format-connected-battery": "{device_alias}: {device_battery_percentage}%"
     },
     "pulseaudio": {
       "format": "VOL {volume}%",

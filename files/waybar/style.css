@@ -76,6 +76,10 @@ tooltip {
   padding: 0 8pt;
 }
 
+#bluetooth {
+  margin-right: 8pt;
+}
+
 #pulseaudio {
   margin-right: 8pt;
 }
