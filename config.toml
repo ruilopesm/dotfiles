@@ -181,6 +181,7 @@ terminal = [
   "zsh",
   { type = "symlink", source = "zsh/.zsh_aliases", target = "~/.zsh_aliases" },
   { type = "symlink", source = "zsh/.zsh_functions", target = "~/.zsh_functions" },
+  { type = "symlink", source = "zsh/.zshenv", target = "~/.zshenv" },
   { type = "symlink", source = "zsh/.zshrc", target = "~/.zshrc" },
   { type = "hook", path = "zsh.sh" },
   { type = "symlink", source = "zsh/.zprofile", target = "~/.zprofile" },
