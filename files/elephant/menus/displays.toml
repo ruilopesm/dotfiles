@@ -10,7 +10,3 @@ actions = { "select" = "hyprmon --profile home" }
 [[entries]]
 text = "Laptop"
 actions = { "select" = "hyprmon --profile laptop" }
-
-[[entries]]
-text = "Lab"
-actions = { "select" = "hyprmon --profile lab" }
