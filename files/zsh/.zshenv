@@ -10,16 +10,16 @@ typeset -U path PATH
 
 # Keep inherited toolchain and virtualenv paths in place in nested shells.
 for dotfiles_bin in \
-    "$HOME/bin" \
-    "$HOME/.local/bin" \
-    "$HOME/.local/share" \
-    "$DOTFILES_DIRECTORY/files/scripts" \
-    "$HOME/.cargo/bin" \
-    /usr/local/texlive/2025/bin/x86_64-linux
+  "$HOME/bin" \
+  "$HOME/.local/bin" \
+  "$HOME/.local/share" \
+  "$DOTFILES_DIRECTORY/files/scripts" \
+  "$HOME/.cargo/bin" \
+  /usr/local/texlive/2025/bin/x86_64-linux
 do
-    if (( ${path[(Ie)$dotfiles_bin]} == 0 )); then
-        path=("$dotfiles_bin" "${path[@]}")
-    fi
+  if (( ${path[(Ie)$dotfiles_bin]} == 0 )); then
+    path=("$dotfiles_bin" "${path[@]}")
+  fi
 done
 unset dotfiles_bin
 
