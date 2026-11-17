@@ -17,21 +17,9 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases
 source $HOME/.zsh_functions
 
-# User
-export LANG=en_US.UTF-8
-export EDITOR=/usr/bin/nvim
-export SUDO_EDITOR=nvim
-export BROWSER=/usr/bin/zen-browser
-export TERM=alacritty
-
 ENABLE_CORRECTION="true"
 CORRECT_IGNORE_FILE=tests
 CORRECT_IGNORE_FILE=logs
-
-export PATH=~/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.local/share:$PATH
-export PATH=$DOTFILES_DIRECTORY/files/scripts:$PATH
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -45,21 +33,5 @@ eval "$(/home/rui/.local/bin/mise activate zsh)"
 # atuin (after fzf, to take over Ctrl+R)
 command -v atuin >/dev/null && eval "$(atuin init zsh --disable-up-arrow)"
 
-# elixir
-export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 4096000"
-
-# rust
-export PATH=$HOME/.cargo/bin:$PATH
-
 # uv
 eval "$(uv generate-shell-completion zsh)"
-
-# android
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# texlive
-export PATH="/usr/local/texlive/2025/bin/x86_64-linux:$PATH"
-export MANPATH="/usr/local/texlive/2025/texmf-dist/doc/man:${MANPATH:-}"
-export INFOPATH="/usr/local/texlive/2025/texmf-dist/doc/info:${INFOPATH:-}"
