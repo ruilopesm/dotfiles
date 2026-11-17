@@ -3,7 +3,6 @@ return function(vars)
     hl.env("DOTFILES_DIRECTORY", vars.dotfiles)
     hl.env("XDG_CONFIG_HOME", vars.config_home)
 
-    hl.env("LIBVA_DRIVER_NAME", "iHD")
     hl.env("XCURSOR_SIZE", "24")
     hl.env("HYPRCURSOR_SIZE", "24")
     hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
