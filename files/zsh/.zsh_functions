@@ -243,7 +243,7 @@ from() {
     return $?
   fi
 
-  dir=$([[ $start_in_root -eq 1 ]] && echo / || echo ~)
+  dir=$([[ $start_in_root -eq 1 ]] && echo / || echo .)
   while true; do
     choice=$(_transfer_remote_list "$host" "$dir" |
       fzf --prompt="Remote [$host:$dir] ▶ ") || return 1
