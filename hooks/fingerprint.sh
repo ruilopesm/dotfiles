@@ -1,6 +1,7 @@
 #!/bin/sh
+set -e
 
-sudo tee /etc/pam.d/polkit-1 > dev/null << 'EOF'
+sudo tee /etc/pam.d/polkit-1 > /dev/null << 'EOF'
 #%PAM-1.0
 
 auth       sufficient   pam_fprintd.so
