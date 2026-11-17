@@ -8,6 +8,8 @@ hyprland = [
   "hyprpicker",
   "hyprlock",
   { type = "symlink", source = "hypr/hyprlock.conf", target = "~/.config/hypr/hyprlock.conf" },
+  "hypridle",
+  { type = "symlink", source = "hypr/hypridle.conf", target = "~/.config/hypr/hypridle.conf" },
   "hyprmon-bin",
   "hyprsunset",
   "hyprshot",
