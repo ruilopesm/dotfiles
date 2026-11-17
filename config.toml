@@ -11,6 +11,7 @@ hyprland = [
   "hypridle",
   { type = "symlink", source = "hypr/hypridle.conf", target = "~/.config/hypr/hypridle.conf" },
   "hyprmon-bin",
+  { type = "symlink", source = "hyprmon/profiles", target = "~/.config/hyprmon/profiles" },
   "hyprsunset",
   "hyprshot",
   "slurp",
