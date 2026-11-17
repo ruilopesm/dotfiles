@@ -56,7 +56,7 @@
     },
     "memory": {
       "interval": 10,
-      "format": "RAM {used}G",
+      "format": "RAM {used:.2f}G",
       "tooltip": true
     },
     "battery": {
