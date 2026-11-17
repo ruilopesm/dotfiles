@@ -21,4 +21,4 @@ actions = { "select" = "sync && systemctl suspend" }
 
 [[entries]]
 text = "Logout"
-action = { "select" = "hyprctl dispatch exit" }
+actions = { "select" = "hyprctl dispatch exit" }
