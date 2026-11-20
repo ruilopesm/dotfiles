@@ -1,0 +1,14 @@
+singleton Theme 1.0 theme.qml
+Bar 1.0 bar.qml
+BarModule 1.0 barmodule.qml
+HoverTip 1.0 hovertip.qml
+Launcher 1.0 launcher.qml
+Workspaces 1.0 workspaces.qml
+Media 1.0 media.qml
+Clock 1.0 clock.qml
+Bluetooth 1.0 bluetooth.qml
+Volume 1.0 volume.qml
+Cpu 1.0 cpu.qml
+Memory 1.0 memory.qml
+Battery 1.0 battery.qml
+Tray 1.0 tray.qml
